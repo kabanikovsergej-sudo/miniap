@@ -5,7 +5,11 @@ import "./index.css";
 import { setupTelegramWebApp } from "@/lib/telegram";
 
 function Bootstrap() {
-  useEffect(() => setupTelegramWebApp(), []);
+  useEffect(() => {
+    document.documentElement.classList.add("dark");
+    document.body.classList.add("dark");
+    return setupTelegramWebApp();
+  }, []);
   return <App />;
 }
 
