@@ -272,3 +272,30 @@ export function useAnalyticsSummary() {
     };
   }, [tick]);
 }
+
+export function trackTodayProgress(data = {}) {
+  try {
+    const value = {
+      type: "today_progress",
+      t: Date.now(),
+      ...data,
+    };
+
+    const raw = localStorage.getItem("nx_today_progress_v1");
+    const list = raw ? JSON.parse(raw) : [];
+    const next = Array.isArray(list) ? [...list, value].slice(-120) : [value];
+
+    localStorage.setItem("nx_today_progress_v1", JSON.stringify(next));
+    return next;
+  } catch {
+    return [];
+  }
+}
+
+export function resetTodayProgressGraph() {
+  try {
+    localStorage.removeItem("nx_today_progress_v1");
+  } catch {
+    // ignore
+  }
+}
