@@ -14,28 +14,44 @@ export function getTelegramUser() {
   return getTelegramWebApp()?.initDataUnsafe?.user || null;
 }
 
+/**
+ * FIX:
+ * Не проверяем только initData.
+ * На некоторых клиентах Telegram WebApp уже существует,
+ * а initData приходит чуть позже.
+ */
 export function isTelegramMiniApp() {
-  return Boolean(getTelegramInitData());
+  const webApp = getTelegramWebApp();
+
+  if (webApp) return true;
+
+  try {
+    return navigator.userAgent.toLowerCase().includes("telegram");
+  } catch {
+    return false;
+  }
 }
 
 function setThemeVariables(webApp) {
   if (typeof document === "undefined") return;
+
   const root = document.documentElement;
   const theme = webApp?.themeParams || {};
 
   root.style.setProperty("--tma-safe-top", `${webApp?.safeAreaInset?.top || 0}px`);
   root.style.setProperty("--tma-safe-bottom", `${webApp?.safeAreaInset?.bottom || 0}px`);
-  root.style.setProperty("--tma-content-safe-bottom", `${webApp?.contentSafeAreaInset?.bottom || 0}px`);
+  root.style.setProperty(
+    "--tma-content-safe-bottom",
+    `${webApp?.contentSafeAreaInset?.bottom || 0}px`
+  );
 
   if (theme.bg_color) root.style.setProperty("--tg-app-bg", theme.bg_color);
-  if (theme.secondary_bg_color) root.style.setProperty("--tg-app-secondary-bg", theme.secondary_bg_color);
-  if (theme.text_color) root.style.setProperty("--tg-app-text", theme.text_color);
+  if (theme.secondary_bg_color)
+    root.style.setProperty("--tg-app-secondary-bg", theme.secondary_bg_color);
+  if (theme.text_color)
+    root.style.setProperty("--tg-app-text", theme.text_color);
 }
 
-/**
- * Initializes Telegram Mini App UI without trusting initDataUnsafe for auth.
- * The backend still validates raw initData before creating an app session.
- */
 export function setupTelegramWebApp() {
   const webApp = getTelegramWebApp();
   if (!webApp) return () => {};
@@ -46,11 +62,10 @@ export function setupTelegramWebApp() {
     webApp.setHeaderColor?.(TMA_HEADER);
     webApp.setBackgroundColor?.(TMA_BG);
     webApp.setBottomBarColor?.(TMA_BG);
-  } catch {
-    // Older Telegram clients may not support every method.
-  }
+  } catch {}
 
   const syncTheme = () => setThemeVariables(webApp);
+
   syncTheme();
 
   try {
@@ -58,9 +73,7 @@ export function setupTelegramWebApp() {
     webApp.onEvent?.("safeAreaChanged", syncTheme);
     webApp.onEvent?.("contentSafeAreaChanged", syncTheme);
     webApp.onEvent?.("viewportChanged", syncTheme);
-  } catch {
-    // No-op on legacy clients.
-  }
+  } catch {}
 
   return () => {
     try {
@@ -68,34 +81,26 @@ export function setupTelegramWebApp() {
       webApp.offEvent?.("safeAreaChanged", syncTheme);
       webApp.offEvent?.("contentSafeAreaChanged", syncTheme);
       webApp.offEvent?.("viewportChanged", syncTheme);
-    } catch {
-      // No-op.
-    }
+    } catch {}
   };
 }
 
 export function hapticImpact(style = "light") {
   try {
     getTelegramWebApp()?.HapticFeedback?.impactOccurred?.(style);
-  } catch {
-    // Haptics are optional.
-  }
+  } catch {}
 }
 
 export function hapticSelection() {
   try {
     getTelegramWebApp()?.HapticFeedback?.selectionChanged?.();
-  } catch {
-    // Haptics are optional.
-  }
+  } catch {}
 }
 
 export function hapticNotification(type = "success") {
   try {
     getTelegramWebApp()?.HapticFeedback?.notificationOccurred?.(type);
-  } catch {
-    // Haptics are optional.
-  }
+  } catch {}
 }
 
 export function openTelegramLink(url) {
@@ -103,30 +108,34 @@ export function openTelegramLink(url) {
   if (!safeUrl) return;
 
   const webApp = getTelegramWebApp();
+
   try {
     if (safeUrl.startsWith("https://t.me/") || safeUrl.startsWith("tg://")) {
       webApp?.openTelegramLink?.(safeUrl);
       return;
     }
+
     webApp?.openLink?.(safeUrl);
     return;
-  } catch {
-    // Fallback below.
-  }
+  } catch {}
 
-  if (typeof window !== "undefined") window.open(safeUrl, "_blank", "noopener,noreferrer");
+  if (typeof window !== "undefined") {
+    window.open(safeUrl, "_blank", "noopener,noreferrer");
+  }
 }
 
 export function showTelegramAlert(message) {
   const text = String(message || "");
   const webApp = getTelegramWebApp();
+
   try {
     if (webApp?.showAlert) {
       webApp.showAlert(text);
       return;
     }
-  } catch {
-    // Fallback below.
+  } catch {}
+
+  if (typeof window !== "undefined") {
+    window.alert(text);
   }
-  if (typeof window !== "undefined") window.alert(text);
 }
