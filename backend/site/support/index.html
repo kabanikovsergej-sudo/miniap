@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>NightcoreX — Центр поддержки</title>
+  <meta name="description" content="Техническая поддержка приложения NightcoreX. Решение проблем, FAQ и связь с разработчиками." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <meta property="og:title" content="NightcoreX — Тех. поддержка" />
+  <meta property="og:description" content="Быстрая помощь и решение проблем с NightcoreX." />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <style>
+    .support-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .faq-section {
+      max-width: 800px;
+      margin: 60px auto 20px;
+      width: 100%;
+    }
+
+    .faq-title {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #fff;
+    }
+
+    details.faq-item {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    details.faq-item[open] {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    summary.faq-q {
+      padding: 15px 20px;
+      cursor: pointer;
+      font-weight: 500;
+      list-style: none; /* Убираем стандартный треугольник */
+      position: relative;
+      padding-right: 40px;
+    }
+
+    summary.faq-q::-webkit-details-marker { display: none; }
+
+    summary.faq-q::after {
+      content: '+';
+      position: absolute;
+      right: 20px;
+      font-size: 1.2em;
+      transition: transform 0.2s;
+    }
+
+    details[open] summary.faq-q::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-a {
+      padding: 0 20px 20px;
+      color: #aaa;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="stars"></canvas>
+
+  <header class="topbar">
+   <a href="/" class="brand">
+  <img src="/NX.svg" alt="NX" class="brand-icon" />
+</a>
+
+
+    <nav class="nav">
+      <a class="nav-link" href="/">Приложение</a>
+      <a class="nav-link" href="/subscription">Подписка</a>
+      <a class="nav-link active" href="/support">Тех. поддержка</a>
+    </nav>
+
+    <div class="topbar-right">
+      <a class="pill" href="https://github.com/msqwrst/nightcorex-releases/releases/download/v1.0.3/NightcoreX-Setup-1.0.3.exe">Скачать бесплатно</a>
+    </div>
+  </header>
+
+  <main class="page enter">
+    <section class="support-page">
+      <div class="support-hero">
+        <div class="support-hero-glow"></div>
+        <h1 class="support-title">Как мы можем помочь?</h1>
+        <p class="muted support-subtitle">
+          Выбери удобный способ связи или найди ответ ниже.
+        </p>
+      </div>
+
+      <div class="support-grid">
+        
+        <div class="support-card">
+          <div class="support-glow"></div>
+          <div class="support-head">
+            <div class="support-icon">💬</div>
+            <div>
+              <div class="support-title-sm">Сообщество Discord</div>
+              <div class="support-sub muted">Самый быстрый ответ</div>
+            </div>
+            <div class="support-badge">Live</div>
+          </div>
+
+          <div class="support-body">
+            <div class="support-row">
+              <div class="support-k">Время ответа</div>
+              <div class="support-v ok">~15 мин</div>
+            </div>
+            <div class="support-row">
+              <div class="support-k">Статус</div>
+              <div class="support-v ok">Online</div>
+            </div>
+
+            <div class="support-actions">
+              <a href="https://discord.gg/your_invite_code" target="_blank" class="btn primary" id="openDiscordBtn">Открыть Discord</a>
+              <button class="btn ghost" id="copySupportBtn" aria-label="Скопировать ссылку">Скопировать</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="support-card">
+          <div class="support-head">
+            <div class="support-icon">✉️</div>
+            <div>
+              <div class="support-title-sm">Email поддержка</div>
+              <div class="support-sub muted">Для важных вопросов</div>
+            </div>
+          </div>
+
+          <div class="support-body">
+            <div class="support-row">
+              <div class="support-k">Время ответа</div>
+              <div class="support-v"> ~24 часа</div>
+            </div>
+            <div class="support-row">
+              <div class="support-k">Адрес</div>
+              <div class="support-v select-all">support@nightcorex.com</div>
+            </div>
+
+            <div class="support-actions">
+              <a href="mailto:support@nightcorex.com" class="btn ghost">Написать письмо</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      
+
+    </section>
+
+    <footer class="footer">
+  <div class="footer-col">
+    <div class="muted">© 2026 NightcoreX</div>
+  </div>
+  <div class="footer-links">
+    <a href="/legal/privacy/" class="muted hover-text">Privacy</a>
+    <span class="muted">•</span>
+    <a href="/legal/terms/" class="muted hover-text">Terms</a>
+  </div>
+</footer>
+
+  </main>
+
+  <div class="nc-modal" id="ncSupportModal" aria-hidden="true">
+    <div class="nc-modal-box" role="dialog" aria-modal="true" aria-labelledby="ncModalTitle">
+      <div class="nc-modal-head">
+        <div class="nc-modal-title" id="ncModalTitle">Уведомление</div>
+        <button class="nc-modal-x" type="button" aria-label="Закрыть" onclick="window.ncCloseModal && window.ncCloseModal()">✕</button>
+      </div>
+      <div class="nc-modal-body" id="ncModalBody"></div>
+      <div class="nc-modal-foot" id="ncModalFoot">
+        <button class="btn" type="button" onclick="window.ncCloseModal && window.ncCloseModal()">Ок</button>
+      </div>
+    </div>
+  </div>
+
+  <nav class="mobile-nav">
+    <a href="/">Приложение</a>
+    <a href="/subscription">Подписка</a>
+    <a href="/support" class="active">Поддержка</a>
+  </nav>
+
+  <script src="/main.js" defer></script>
+</body>
+</html>

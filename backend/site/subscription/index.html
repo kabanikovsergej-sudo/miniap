@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ru" class="js-preload">
+
+<head>
+  <meta charset="utf-8" />
+  <title>NightcoreX — Подписка</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link href="/style.css" rel="stylesheet" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+  <canvas id="stars"></canvas>
+
+  <header class="topbar">
+    <a href="/" class="brand">
+  <img src="/NX.svg" alt="NX" class="brand-icon" />
+</a>
+
+
+    <nav class="nav">
+      <a class="nav-link" href="/">Приложение</a>
+      <a class="nav-link active" href="/subscription">Подписка</a>
+      <a class="nav-link" href="/support">Тех. поддержка</a>
+    </nav>
+
+    <div class="topbar-right">
+      <a class="pill"
+        href="https://github.com/msqwrst/nightcorex-releases/releases/download/v1.0.3/NightcoreX-Setup-1.0.3.exe">
+        Скачать бесплатно
+      </a>
+    </div>
+  </header>
+
+  <main class="page enter">
+    <section class="pricing">
+      <h1 class="pricing-title">Подписка NightcoreX</h1>
+
+      <div class="pricing-switch">
+        <button class="seg active" data-plan="1m">1 мес</button>
+        <button class="seg" data-plan="3m">3 мес</button>
+        <button class="seg" data-plan="12m">12 мес</button>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Обычные планы -->
+        <article class="price-card">
+          <div class="price-top">
+            <div class="price-kicker" id="leftKicker">1 месяц</div>
+
+            <!-- бейдж скидки слева -->
+            <div class="tag soft" id="leftTag" style="display:none;">
+              Скидка <b><span id="leftDiscount">-20%</span></b>
+            </div>
+          </div>
+
+          <div class="price-value">
+            <span class="big" id="leftPrice">5.00</span>
+            <span class="cur">USD</span>
+            <span class="per" id="leftPer">/ мес</span>
+            <span class="old" id="leftOld" style="display:none;">$0.00</span>
+          </div>
+
+          <div class="tiny muted" id="leftFX">≈ 380 ₽ / 215 ₴</div>
+
+          <button class="btn primary wide" id="subBtn1">Подписаться</button>
+
+          <ul class="bullets">
+            <li>Приоритетные алерты</li>
+            <li>Расширенные функции</li>
+            <li>Быстрая синхронизация</li>
+            <li>Ранний доступ к обновлениям</li>
+            <li>Премиум-поддержка</li>
+          </ul>
+
+          <div class="tiny muted">Можно подарить другу</div>
+        </article>
+
+        <!-- Навсегда -->
+        <article class="price-card featured">
+          <div class="shine"></div>
+          <div class="price-top">
+            <div class="price-kicker">Навсегда</div>
+            <div class="tag gold">Скидка <b><span id="rightDiscount">-75%</span></b></div>
+          </div>
+
+          <div class="price-value">
+            <span class="big" id="rightPrice">44.99</span>
+            <span class="cur">USD</span>
+            <span class="old" id="rightOld">$180.00</span>
+          </div>
+
+          <div class="tiny muted" id="rightFX">≈ 4 499 ₽ / 1 800 ₴</div>
+
+          <button class="btn light wide" id="subBtn2">Приобрести навсегда</button>
+
+          <ul class="bullets">
+            <li>Один платёж — доступ навсегда</li>
+            <li>Все премиум-функции</li>
+            <li>Приоритетные алерты</li>
+            <li>Премиум-поддержка</li>
+            <li>Все будущие обновления</li>
+          </ul>
+
+          <div class="tiny muted">Лучшая цена</div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="muted">© NightcoreX</div>
+      <div class="muted">Secure Access</div>
+    </footer>
+  </main>
+
+  <script src="/main.js"></script>
+
+  <script>
+    (() => {
+      // Курсы (поменяй на актуальные, если надо)
+      // ===== REAL FX (live) =====
+      const FX = {
+        RUB_PER_USD: null,
+        UAH_PER_USD: null,
+        _loaded: false
+      };
+
+      async function loadFx() {
+        // кэш на 30 минут, чтобы не дергать API постоянно
+        const key = "nx_fx_cache_v1";
+        const cached = (() => {
+          try { return JSON.parse(localStorage.getItem(key) || "null"); } catch { return null; }
+        })();
+
+        if (cached && (Date.now() - cached.ts) < 30 * 60 * 1000) {
+          FX.RUB_PER_USD = cached.rub;
+          FX.UAH_PER_USD = cached.uah;
+          FX._loaded = true;
+          return;
+        }
+
+        // Frankfurter (без API key)
+        // Можно: api.frankfurter.dev / api.frankfurter.app
+        const urls = [
+  "https://api.frankfurter.app/latest?from=USD&to=RUB,UAH",
+  "https://api.frankfurter.dev/latest?from=USD&to=RUB,UAH",
+  "https://open.er-api.com/v6/latest/USD",
+];
+
+let data = null;
+let lastErr = null;
+
+for (const url of urls) {
+  try {
+    const r = await fetch(url, { cache: "no-store" });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    const j = await r.json();
+
+    // frankfurter
+    if (j?.rates?.RUB && j?.rates?.UAH) {
+      data = { rub: j.rates.RUB, uah: j.rates.UAH };
+      break;
+    }
+
+    // er-api
+    if (j?.rates?.RUB && j?.rates?.UAH) {
+      data = { rub: j.rates.RUB, uah: j.rates.UAH };
+      break;
+    }
+  } catch (e) {
+    lastErr = e;
+  }
+}
+
+if (!data) throw lastErr || new Error("FX fetch failed");
+
+FX.RUB_PER_USD = Number(data.rub);
+FX.UAH_PER_USD = Number(data.uah);
+FX._loaded = true;
+
+      }
+
+
+      // Планы подписки
+      const PLANS = {
+        "1m": { label: "1 месяц", price: 5.00, period: "мес" },
+        "3m": { label: "3 месяца", price: 12.00, period: "мес", discount: 20, old: 15.00 },
+        "12m": { label: "12 месяцев", price: 30.00, period: "мес", discount: 50, old: 60.00 }
+      };
+
+      // Навсегда (эквивалент 3 лет: 36×5 = 180)
+      const LIFETIME = { price: 44.99, old: 180.00 };
+
+      const $ = (sel) => document.querySelector(sel);
+      const $$ = (sel) => Array.from(document.querySelectorAll(sel));
+
+      const leftKicker = $("#leftKicker");
+      const leftPrice = $("#leftPrice");
+      const leftOld = $("#leftOld");
+      const leftPer = $("#leftPer");
+      const leftDisc = $("#leftDiscount");
+      const leftTag = $("#leftTag");
+      const leftFX = $("#leftFX");
+      
+
+      const rightPrice = $("#rightPrice");
+      const rightOld = $("#rightOld");
+      const rightFX = $("#rightFX");
+      const rightDiscount = $("#rightDiscount");
+
+      function fmtMoney(n) { return Number(n).toFixed(2); }
+
+      function fmtFx(usd) {
+  // если курс ещё не загрузился — покажем заглушку
+  if (!FX._loaded || !FX.RUB_PER_USD || !FX.UAH_PER_USD) return "≈ —";
+
+  const rub = Math.round(Number(usd) * FX.RUB_PER_USD);
+  const uah = Math.round(Number(usd) * FX.UAH_PER_USD);
+
+  const rubStr = rub.toLocaleString("ru-RU");
+  const uahStr = uah.toLocaleString("uk-UA");
+
+  return `≈ ${rubStr} ₽ / ${uahStr} ₴`;
+}
+
+
+      // --- Анимация смены значений ---
+      const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      function markAnim(el) {
+        if (!el) return;
+        el.classList.add("swap-anim", "swap-in");
+      }
+
+      function swapText(el, nextText) {
+        if (!el) return;
+
+        if (reduceMotion) {
+          el.textContent = nextText;
+          return;
+        }
+
+        el.dataset.swapNext = nextText;
+        if (el.dataset.swapping === "1") return;
+
+        el.dataset.swapping = "1";
+        el.classList.remove("swap-in");
+        el.classList.add("swap-out");
+
+        const done = () => {
+          const text = el.dataset.swapNext ?? nextText;
+          el.textContent = text;
+          void el.offsetWidth;
+          el.classList.remove("swap-out");
+          el.classList.add("swap-in");
+          setTimeout(() => (el.dataset.swapping = "0"), 30);
+        };
+
+        const t = setTimeout(done, 220);
+        el.addEventListener("transitionend", () => { clearTimeout(t); done(); }, { once: true });
+      }
+
+      [leftKicker, leftPrice, leftOld, leftPer, leftDisc, leftFX, rightPrice, rightOld, rightFX, rightDiscount]
+        .forEach(markAnim);
+
+      function applyPlan(key) {
+        const p = PLANS[key] || PLANS["1m"];
+
+        swapText(leftKicker, p.label);
+        swapText(leftPrice, fmtMoney(p.price));
+        swapText(leftPer, `/ ${p.period}`);
+        if (leftFX) swapText(leftFX, fmtFx(p.price));
+
+        // старая цена
+        if (leftOld) {
+          const showOld = !!(p.old && p.old > p.price);
+          leftOld.style.display = showOld ? "" : "none";
+          if (showOld) swapText(leftOld, `$${fmtMoney(p.old)}`);
+        }
+
+        // бейдж скидки
+        if (leftTag) {
+          const hasDisc = !!(p.discount && p.old && p.old > p.price);
+          leftTag.style.display = hasDisc ? "" : "none";
+          if (hasDisc && leftDisc) swapText(leftDisc, `-${p.discount}%`);
+        }
+      }
+
+      function applyLifetime() {
+        if (rightPrice) swapText(rightPrice, fmtMoney(LIFETIME.price));
+        if (rightOld) swapText(rightOld, `$${fmtMoney(LIFETIME.old)}`);
+        if (rightFX) swapText(rightFX, fmtFx(LIFETIME.price));
+
+        if (rightDiscount) {
+          const disc = Math.round((1 - (LIFETIME.price / LIFETIME.old)) * 100);
+          swapText(rightDiscount, `-${disc}%`);
+        }
+      }
+
+      // Клики по сегментам
+      $$(".pricing-switch .seg").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          $$(".pricing-switch .seg").forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          applyPlan(btn.dataset.plan);
+        });
+      });
+
+      // Подгружаем курс и перерисовываем суммы
+      loadFx()
+        .then(() => {
+          applyLifetime();
+          applyPlan(document.querySelector(".pricing-switch .seg.active")?.dataset.plan || "1m");
+        })
+        .catch(() => {
+          // если API недоступен — просто оставим заглушку/старые значения
+        });
+
+      setInterval(() => {
+        loadFx()
+          .then(() => {
+            applyLifetime();
+            applyPlan($(".pricing-switch .seg.active")?.dataset.plan || "1m");
+          })
+          .catch(() => { });
+      }, 30 * 60 * 1000);
+
+
+      requestAnimationFrame(() => {
+        document.documentElement.classList.remove("js-preload");
+      });
+
+      // ====== ДОБАВЛЕНО: ПЕРЕХОД НА СТРАНИЦУ ВЫБОРА ОПЛАТЫ ======
+      const subBtn1 = $("#subBtn1");
+      const subBtn2 = $("#subBtn2");
+
+      // ВАЖНО: ./pay.html потому что файлы у тебя лежат в одной папке subscription
+      if (subBtn1) {
+        subBtn1.addEventListener("click", () => {
+          const plan = $(".pricing-switch .seg.active")?.dataset.plan || "1m";
+          window.location.href = `/subscription/pay/?plan=${encodeURIComponent(plan)}`;
+        });
+      }
+
+      if (subBtn2) {
+        subBtn2.addEventListener("click", () => {
+          window.location.href = "/subscription/pay/?plan=lifetime";
+        });
+      }
+      // ====== /ДОБАВЛЕНО ======
+    })();
+  </script>
+
+  <nav class="mobile-nav">
+    <a href="/">Приложение</a>
+    <a href="/subscription" class="active">Подписка</a>
+    <a href="/support">Тех. поддержка</a>
+  </nav>
+</body>
+
+</html>

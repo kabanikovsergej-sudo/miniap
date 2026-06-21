@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru" class="js-preload">
+<head>
+  <meta charset="utf-8" />
+  <title>NightcoreX — Успешная оплата</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="/style.css" rel="stylesheet" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <style>
+    :root {
+      --glass: rgba(255,255,255,0.04);
+      --glass-border: rgba(255,255,255,0.08);
+    }
+    .wrap { width: min(820px, 94vw); margin: 40px auto; }
+    .card {
+      border: 1px solid var(--glass-border);
+      background: var(--glass);
+      border-radius: 20px;
+      padding: 22px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+      backdrop-filter: blur(18px);
+    }
+    .row { display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:space-between; }
+    .keybox {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 18px;
+      padding: 14px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(0,0,0,0.35);
+      color: #fff;
+      word-break: break-all;
+    }
+    .btn2 {
+      display:inline-flex; align-items:center; justify-content:center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.06);
+      color: #fff;
+      cursor: pointer;
+      transition: transform .15s ease, background .15s ease;
+      user-select: none;
+    }
+    .btn2:hover { transform: translateY(-2px); background: rgba(255,255,255,0.09); }
+    .muted2 { opacity: .75; }
+    .ok { color: var(--cyan); font-weight: 800; }
+    .err { color: #ff6b6b; font-weight: 800; }
+    .tiny2 { font-size: 12px; opacity: .75; }
+  </style>
+</head>
+
+<body>
+  <canvas id="stars"></canvas>
+
+  <header class="topbar">
+    <span class="brand-text">Nightcore<span class="brand-accent">X</span></span>
+
+    <nav class="nav">
+      <a class="nav-link" href="/">Приложение</a>
+      <a class="nav-link active" href="/subscription">Подписка</a>
+      <a class="nav-link" href="/support">Тех. поддержка</a>
+    </nav>
+
+    <div class="topbar-right">
+      <a class="pill" href="/subscription">Назад</a>
+    </div>
+  </header>
+
+  <main class="page enter">
+    <section class="wrap">
+      <div class="card">
+        <h1 style="margin:0 0 10px 0;">Оплата завершена</h1>
+        <div id="status" class="muted2">Проверяем оплату и выдаём ключ…</div>
+
+        <div style="height:14px"></div>
+
+        <div id="keyWrap" style="display:none;">
+          <div class="muted2" style="margin-bottom:8px;">Ваш ключ:</div>
+          <div class="row">
+            <div id="key" class="keybox" style="flex:1 1 420px;"></div>
+            <button id="copyBtn" class="btn2" type="button">Скопировать</button>
+          </div>
+          <div style="height:10px"></div>
+          <div class="tiny2">Сохраните ключ. Также вы можете активировать его в приложении через <b>Redeem</b>.</div>
+        </div>
+
+        <div id="errWrap" style="display:none; margin-top:12px;">
+          <div id="err" class="err"></div>
+          <div class="tiny2" style="margin-top:6px;">Если вы уверены, что оплата прошла — напишите в поддержку и приложите скрин/ID оплаты.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/main.js"></script>
+  <script>
+    (function () {
+      const qs = new URLSearchParams(location.search);
+      const sessionId = qs.get("session_id");
+
+      // Если backend на другом домене (Render), укажи его тут.
+      // Можно переопределить через ?backend=https://....
+      const backend = (qs.get("backend") || "https://resale-helper-app.onrender.com").replace(/\/$/, "");
+
+      const $status = document.getElementById("status");
+      const $keyWrap = document.getElementById("keyWrap");
+      const $key = document.getElementById("key");
+      const $errWrap = document.getElementById("errWrap");
+      const $err = document.getElementById("err");
+      const $copy = document.getElementById("copyBtn");
+
+      function showErr(msg) {
+        $status.innerHTML = `<span class="err">Ошибка</span> · ${msg}`;
+        $err.textContent = msg;
+        $errWrap.style.display = "block";
+      }
+
+      if (!sessionId) {
+        showErr("Нет session_id в ссылке. Проверь Stripe success_url: ?session_id={CHECKOUT_SESSION_ID}");
+        return;
+      }
+
+      fetch(`${backend}/api/claim/stripe?session_id=${encodeURIComponent(sessionId)}`)
+        .then(r => r.json().then(j => ({ ok: r.ok, j })))
+        .then(({ ok, j }) => {
+          if (!ok || !j?.key) {
+            const msg = j?.error || j?.detail || "Не удалось выдать ключ";
+            showErr(msg);
+            return;
+          }
+
+          $status.innerHTML = `<span class="ok">Готово</span> · Ключ выдан`;
+          $key.textContent = j.key;
+          $keyWrap.style.display = "block";
+
+          $copy.addEventListener("click", async () => {
+            try {
+              await navigator.clipboard.writeText(j.key);
+              $copy.textContent = "Скопировано";
+              setTimeout(() => ($copy.textContent = "Скопировать"), 1200);
+            } catch {
+              // fallback
+              const ta = document.createElement("textarea");
+              ta.value = j.key;
+              document.body.appendChild(ta);
+              ta.select();
+              document.execCommand("copy");
+              ta.remove();
+              $copy.textContent = "Скопировано";
+              setTimeout(() => ($copy.textContent = "Скопировать"), 1200);
+            }
+          });
+        })
+        .catch(() => showErr("Ошибка сети/сервера. Попробуй обновить страницу."));
+
+      requestAnimationFrame(() => {
+        document.documentElement.classList.remove("js-preload");
+      });
+    })();
+  </script>
+</body>
+</html>

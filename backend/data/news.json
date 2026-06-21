@@ -1,0 +1,29 @@
+{
+  "panels": [
+    {
+      "title": "Панель 1",
+      "text": "Тут будут новости",
+      "badge": "Info",
+      "image": ""
+    },
+    {
+      "title": "awsdasd",
+      "text": "Тут будут новости",
+      "badge": "Infoaw",
+      "image": ""
+    },
+    {
+      "title": "Панель 3",
+      "text": "Тут будут новости",
+      "badge": "Info",
+      "image": ""
+    },
+    {
+      "title": "Панель 4",
+      "text": "Тут будут новости",
+      "badge": "Info",
+      "image": ""
+    }
+  ],
+  "updatedAt": "2026-01-27T07:30:32.011Z"
+}

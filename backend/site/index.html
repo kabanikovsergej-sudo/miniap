@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+
+  <link rel="canonical" href="https://nightcorex.com/" />
+
+
+  <!-- SEO -->
+  <title>NightcoreX — официальный сайт</title>
+  <meta name="description"
+    content="NightcoreX — официальное приложение. Уведомления, мониторинг и автоматизация в одном интерфейсе." />
+
+  <!-- Viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  
+  <canvas id="stars"></canvas>
+
+  <header class="topbar">
+      <a href="/" class="brand">
+  <img src="/NX.svg" alt="NX" class="brand-icon" />
+</a>
+
+    </a>
+
+    <nav class="nav">
+      <a class="nav-link active" href="/">Приложение</a>
+      <a class="nav-link" href="/subscription">Подписка</a>
+      <a class="nav-link" href="/support">Тех. поддержка</a>
+    </nav>
+
+    <div class="topbar-right">
+      <a class="pill" href="https://github.com/msqwrst/nightcorex-releases/releases/download/v1.0.3/NightcoreX-Setup-1.0.3.exe">Скачать бесплатно</a>
+    </div>   
+  </header>
+
+  <main class="page enter">
+    <section class="hero">
+      <div class="hero-glow"></div>
+
+      <span class="night-text">Nightcore<span class="night-accent">X</span> - всё в одном приложении</span>
+
+      <p class="sr-only">NightcoreX — официальный сайт приложения NightcoreX.</p>
+
+      <p class="hero-subtitle">
+        Discord-доступ, уведомления, мониторинг и автоматизация — в одном интерфейсе.
+        Быстро. Чисто. Без лишнего.
+      </p>
+
+      <div class="hero-actions" id="download">
+        <button class="btn primary" id="downloadBtn" type="button">Скачать бесплатно</button>
+      </div>
+
+      <div class="mini-demo">
+        <div class="mini-window" aria-label="Демо приложения NightcoreX">
+          <div class="mini-top">
+            <div class="mini-dots"><span></span><span></span><span></span></div>
+            <div class="mini-top-title">NightcoreX</div>
+            <div class="mini-pill mini-pill-vip">VIP</div>
+          </div>
+
+          <div class="mini-app" aria-hidden="true">
+            <aside class="mini-side">
+              <div class="mini-brand">
+                <span class="mini-mark">NX</span>
+                <span class="mini-name">NightCore</span>
+              </div>
+
+              <div class="mini-sec">MENU</div>
+              <div class="mini-nav">
+                <div class="mini-nav-item active">Home</div>
+                <div class="mini-nav-item">BP</div>
+                <div class="mini-nav-item">Timer</div>
+                <div class="mini-nav-item">Calculator</div>
+                <div class="mini-nav-item">VIP</div>
+                <div class="mini-nav-item">About</div>
+              </div>
+            </aside>
+
+            <section class="mini-main">
+              <div class="mini-title">
+                ТВОЙ ДОСТУП К<br />ИНСТРУМЕНТАМ
+              </div>
+
+              <div class="mini-cards">
+                <div class="mini-card">
+                  <div class="mini-card-title">BP</div>
+                  <div class="mini-card-desc">Фарм‑лист с быстрыми отметками и сохранением прогресса.</div>
+                  <div class="mini-chip">Фарм‑лист</div>
+                </div>
+
+                <div class="mini-card">
+                  <div class="mini-card-title">Таймер</div>
+                  <div class="mini-card-desc">Объявления • аукционы • напоминания. Быстро и без нервов.</div>
+                  <div class="mini-chip">Быстрый отсчёт</div>
+                </div>
+
+                <div class="mini-card">
+                  <div class="mini-card-title">Калькулятор</div>
+                  <div class="mini-card-desc">Учитывай доход/расход и всегда знай реальный итог.</div>
+                  <div class="mini-chip">Учёт денег</div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <div class="blur-orb orb-1"></div>
+        <div class="blur-orb orb-2"></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="muted">© NightcoreX</div>
+      <div class="muted">mobsi.off</div>
+    </footer>
+  </main>
+
+
+  <!-- Auth Success Modal (shown only when ?auth=1&token=... is present) -->
+  <div id="authModal" class="auth-modal-backdrop" style="display:none;">
+    <div class="auth-modal-card">
+      <div class="auth-modal-head">
+        <div class="auth-ok">✓</div>
+        <div>
+          <div class="auth-title">Авторизация прошла успешно</div>
+          <div class="auth-sub">Вернись в приложение. Если окно не открылось — нажми кнопку ниже.</div>
+        </div>
+      </div>
+
+      <div class="auth-actions">
+        <button class="auth-btn auth-ghost" id="authOk">Ок</button>
+      </div>
+
+
+    </div>
+  </div>
+
+  <style>
+    .auth-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: rgba(0, 0, 0, .55);
+      backdrop-filter: blur(10px);
+      z-index: 9999;
+      animation: authFadeIn .18s ease-out both;
+    }
+
+    @keyframes authFadeIn {
+      from {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    .auth-modal-card {
+      width: min(720px, 94vw);
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, .10);
+      background: rgba(14, 18, 35, .92);
+      box-shadow: 0 18px 60px rgba(0, 0, 0, .55);
+      padding: 22px 20px;
+      transform: translateY(10px) scale(.985);
+      animation: authPop .22s cubic-bezier(.2, .9, .2, 1) both;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .auth-modal-card:before {
+      content: "";
+      position: absolute;
+      inset: -2px;
+      background:
+        radial-gradient(700px 260px at 15% 0%, rgba(0, 229, 255, .18), transparent 55%),
+        radial-gradient(700px 260px at 90% 40%, rgba(106, 0, 255, .22), transparent 55%);
+      pointer-events: none;
+    }
+
+    @keyframes authPop {
+      to {
+        transform: translateY(0) scale(1)
+      }
+    }
+
+    .auth-modal-head {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start
+    }
+
+    .auth-ok {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: rgba(0, 229, 255, .14);
+      border: 1px solid rgba(0, 229, 255, .22);
+      font-weight: 900;
+    }
+
+    .auth-title {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: .2px;
+      margin-bottom: 6px
+    }
+
+    .auth-sub {
+      opacity: .85;
+      line-height: 1.45
+    }
+
+    .auth-actions {
+      position: relative;
+      z-index: 1;
+      margin-top: 16px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap
+    }
+
+    .auth-btn {
+      border: none;
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform .12s ease, filter .12s ease, background .12s ease;
+      user-select: none;
+    }
+
+    .auth-btn:active {
+      transform: translateY(1px) scale(.99)
+    }
+
+    .auth-primary {
+      background: linear-gradient(135deg, rgba(0, 229, 255, .95), rgba(106, 0, 255, .85));
+      color: #05070c;
+    }
+
+    .auth-ghost {
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .10);
+      color: rgba(255, 255, 255, .92);
+    }
+
+    .auth-chip {
+      position: relative;
+      z-index: 1;
+      margin-top: 14px;
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, .10);
+      background: rgba(255, 255, 255, .05);
+      opacity: .9;
+    }
+  </style>
+
+  <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const auth = params.get("auth");
+
+      if (auth !== "1") return;
+
+      const modal = document.getElementById("authModal");
+      const okBtn = document.getElementById("authOk");
+
+      function closeModal() {
+        try { modal.style.display = "none"; } catch { }
+        try {
+          const clean = window.location.origin + window.location.pathname;
+          window.history.replaceState({}, "", clean);
+        } catch { }
+      }
+
+      modal.style.display = "grid";
+      okBtn.addEventListener("click", closeModal);
+
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+      });
+    })();
+  </script>
+
+  <script src="./main.js"></script>
+
+  <nav class="mobile-nav">
+    <a href="/" class="active">Приложение</a>
+    <a href="/subscription">Подписка</a>
+    <a href="/support">Поддержка</a>
+  </nav>
+
+  <script>
+    function closeAnnounce() {
+      const el = document.getElementById("announce");
+      if (!el) return;
+      el.style.transition = "opacity 220ms ease, transform 220ms ease";
+      el.style.opacity = "0";
+      el.style.transform = "translateY(-10px)";
+      setTimeout(() => el.remove(), 240);
+    }
+  </script>
+
+
+  <!-- Download Modal -->
+  <div id="dlModal" class="dl-modal-backdrop" style="display:none;">
+    <div class="dl-modal-card" role="dialog" aria-modal="true" aria-labelledby="dlTitle">
+      <div class="dl-modal-head">
+        <div class="dl-icon">⬇</div>
+        <div>
+          <div class="dl-title" id="dlTitle">Скачать NightcoreX</div>
+          <div class="dl-sub" id="dlSub">Подготовка…</div>
+        </div>
+      </div>
+
+      <div class="dl-grid" id="dlGrid">
+        <div class="dl-row"><span>Файл</span><b id="dlFile">—</b></div>
+        <div class="dl-row"><span>Версия</span><b id="dlVer">—</b></div>
+        <div class="dl-row"><span>Платформа</span><b id="dlOS">—</b></div>
+        <div class="dl-row"><span>Размер</span><b id="dlSize">—</b></div>
+      </div>
+
+      <div class="dl-actions">
+        <button class="dl-btn dl-ghost" id="dlCancel">Отмена</button>
+        <button class="dl-btn dl-primary" id="dlGo">Скачать</button>
+      </div>
+
+    
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const btn = document.getElementById("downloadBtn");
+      const modal = document.getElementById("dlModal");
+      const cancel = document.getElementById("dlCancel");
+      const go = document.getElementById("dlGo");
+
+      const elSub = document.getElementById("dlSub");
+      const elFile = document.getElementById("dlFile");
+      const elVer = document.getElementById("dlVer");
+      const elOS = document.getElementById("dlOS");
+      const elSize = document.getElementById("dlSize");
+
+      // Поставь свою версию тут (или потом сделаем /download/meta на сервере)
+      const APP_VERSION = "v0.3.20";
+
+      function detectOS() {
+        const ua = navigator.userAgent.toLowerCase();
+        if (ua.includes("windows")) return "windows";
+        if (ua.includes("mac os") || ua.includes("macintosh")) return "mac";
+        if (ua.includes("linux")) return "linux";
+        return "windows";
+      }
+
+      function niceOS(os) {
+        if (os === "windows") return "Windows";
+        if (os === "mac") return "macOS";
+        if (os === "linux") return "Linux";
+        return os;
+      }
+
+      function formatBytes(bytes) {
+        if (!bytes || !isFinite(bytes)) return "—";
+        const units = ["B", "KB", "MB", "GB"];
+        let i = 0, n = bytes;
+        while (n >= 1024 && i < units.length - 1) { n /= 1024; i++; }
+        return (i === 0 ? n.toFixed(0) : n.toFixed(1)) + " " + units[i];
+      }
+
+      function openModal() { modal.style.display = "grid"; }
+      function closeModal() { modal.style.display = "none"; }
+
+      async function loadInfo(os) {
+        // Мы берём файл через твой домен, НЕ показывая GitHub ссылку
+        const url = "https://github.com/msqwrst/nightcorex-releases/releases/download/v1.0.3/NightcoreX-Setup-1.0.3.exe";
+
+        elSub.textContent = "Готовим информацию о файле…";
+        elFile.textContent = "—";
+        elVer.textContent = APP_VERSION;
+        elOS.textContent = niceOS(os);
+        elSize.textContent = "—";
+
+        // Попробуем получить размер/имя файла через HEAD (если сервер отдаёт Content-Length / Content-Disposition)
+        try {
+          const head = await fetch(url, { method: "HEAD" });
+          if (head.ok) {
+            const cd = head.headers.get("content-disposition") || "";
+            const m = cd.match(/filename="(.+?)"/i);
+            const name = m?.[1] || "NIGHT-CORE-Setup-0.3.20.exe";
+            const len = Number(head.headers.get("content-length") || 0);
+            elFile.textContent = name;
+            elSize.textContent = formatBytes(len);
+            elSub.textContent = "Проверь данные и нажми “Скачать”.";
+            return { url, filename: name };
+          }
+        } catch { }
+
+        // Фолбэк, если HEAD недоступен
+        const fallbackName = "NIGHT-CORE-Setup-0.3.20.exe";
+        elFile.textContent = fallbackName;
+        elSub.textContent = "Нажми “Скачать” — файл начнёт загружаться.";
+        return { url, filename: fallbackName };
+      }
+
+      async function downloadFile(url, filename) {
+        // Самый надёжный способ для GitHub Releases — просто перейти по ссылке.
+        // (fetch/blob часто ломается из-за CORS и редиректов)
+        window.location.href = url;
+      }
+
+      let current = { url: "", filename: "" };
+
+      btn?.addEventListener("click", async () => {
+        const os = detectOS();
+        openModal();
+        go.disabled = true;
+
+        current = await loadInfo(os);
+        go.disabled = false;
+      });
+
+      cancel?.addEventListener("click", closeModal);
+      modal?.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
+
+      go?.addEventListener("click", async () => {
+        try {
+          go.disabled = true;
+          elSub.textContent = "Скачиваем…";
+          await downloadFile(current.url, current.filename);
+          elSub.textContent = "Загрузка началась ✅";
+          setTimeout(closeModal, 600);
+        } catch {
+          elSub.textContent = "Не получилось скачать. Попробуй позже.";
+          go.disabled = false;
+        }
+      });
+    })();
+  </script>
+
+
+</body>
+
+</html>

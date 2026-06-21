@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+}
+
+body {
+  background: #0b1220; /* на случай если где-то белое вылезет */
+}
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  overscroll-behavior: none;
+}
+
+/* Общий фикс для страниц внутри Layout: экран не должен раздуваться ниже окна. */
+#root main [class*="min-h-screen"] {
+  min-height: 100% !important;
+}
+
+#root main [class*="h-screen"] {
+  height: 100% !important;
+}
+
+#root main > div,
+#root main > div > div {
+  min-width: 0;
+}
+
+
+/* ✅ важно: НЕ light */
+:root { color-scheme: dark; }
+.dark { color-scheme: dark; }
+
+@layer base {
+  input, textarea, select {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Tailwind ring (focus-visible:ring-*) */
+  input:focus, textarea:focus, select:focus {
+    --tw-ring-shadow: 0 0 #0000 !important;
+    --tw-ring-offset-shadow: 0 0 #0000 !important;
+    box-shadow: none !important;
+  }
+}
+
+/* 🔥 Убрать scrollbar в Electron / Chrome */
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}

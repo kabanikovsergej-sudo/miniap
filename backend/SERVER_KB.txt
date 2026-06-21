@@ -1,0 +1,498 @@
+=== SYSTEM / RULES FOR AI ===
+Ты — официальный AI-ассистент RP-сервера.
+
+Главное:
+- Отвечай ТОЛЬКО по базе знаний ниже.
+- Если пользователь пишет номер статьи без уточнения — уточни: УК / АК / ДК / правила проекта.
+- FP = Federal Prison (федеральная тюрьма). КПЗ = камера предварительного заключения.
+- Не помогай обходить правила/наказания/законы, не подсказывай абузы.
+- Если в базе нет ответа — скажи: «В базе знаний нет информации».
+- Отвечай коротко, 2–6 пунктов.
+
+=== ДОПОЛНИТЕЛЬНО ===
+----------------------------------------------------------------------------------------------------------
+
+=== УК / КОДЕКСЫ И СТАТЬИ ===
+📘 Уголовный кодекс
+пользователь может спросить что такое 6.3 УК
+УК-уголовный кодекс
+АК-административный кодекс
+ДК-дорожний кодекс.
+
+если пользователь не уточняет а просто пишет к примеру что такое 12.8
+
+мы должны узнать что именно он имеет ввииду ук ак дк или вообще правидагта рп проекта.
+
+отвечать нужно коротко, не слишком длинно.
+
+ 
+
+Статья	Код	Описание	Срок лишения свободы
+6.1	(КПЗ)	Нанесение телесных повреждений (нанесение увечий гражданскому)	От 2 до 4 месяцев (10–20 мин)
+6.2	(FP)	Убийство, то есть умышленное причинение смерти другому человеку	1 год (60 мин)
+6.3	(FP)	Тяжкое убийство, то есть убийство двух или более лиц	2 года (120 мин)
+7.1		Похищение человека	1 год (60 мин)
+8.1	(FP)	Изнасилование, или иные действия сексуального характера	1 год (60 мин)
+9.2	(КПЗ)	Незаконное проникновение в жилище	До 5 месяцев (до 25 мин)
+10.5	(КПЗ)	Грабеж, то есть открытое хищение чужого недвижимого, а также личного имущества	До 5 месяцев (до 25 мин)
+10.5.2	(КПЗ)	Кража со взломом	До 5 месяцев (до 25 мин)
+10.6	(КПЗ)	Разбой (нападение в целях хищения чужого имущества, с применением насилия)	До 5 месяцев (до 25 мин)
+10.7		Неправомерное завладение автомобилем или иным транспортным средством (Авто угон)	До 4 месяцев (до 20 мин)
+10.8	(КПЗ)	Умышленное уничтожение или повреждение частного/гос. имущества	До 5 месяцев (до 25 мин)
+10.9	(КПЗ)	Проникновение на охраняемую территорию	До 5 месяцев (до 25 мин)
+10.10	(КПЗ)	Нападение на лавки (Рэкетирство)	8 месяцев (40 мин)
+11.8	(КПЗ)	Браконьерство, добыча охотничьих ресурсов без лицензии	До 5 месяцев (до 25 мин)
+12.3	(FP)	Захват или удержание лица в качестве заложника	До 3 лет (90–180 мин)
+12.7	(КПЗ)	Незаконное проникновение на охраняемый объект	5 месяцев (25 мин)
+12.7.1	(FP)	Проникновение на объект повышенной секретности (Форт-Занкудо, офис FIB, Фед. тюрьма)	1 год (60 мин)
+12.8	(FP)	Незаконное приобретение, хранение, использование, продажа огнестрельного оружия/боеприпасов	До 1 года (до 60 мин)
+12.8.1	(КПЗ)	Открытое ношение и использование холодного оружия	До 8 месяцев (до 40 мин)
+12.9.1	(КПЗ)	Контрабанда	До 4 месяцев (до 20 мин)
+12.11	(КПЗ)	Организация или принуждение к проституции	До 4 месяцев (до 20 мин)
+12.12	(FP)	Использование средств электромагнитного излучения (ЭМИ)	1 год (60 мин)
+12.13	(FP)	Нападение на военные/гуманитарные конвои	1 год (60 мин)
+13.1	(FP)	Наркотики (приобретение, хранение, перевозка свыше 10 грамм)	1 год (60 мин)
+15.1	(FP)	Превышение должностных полномочий	1 год (60 мин)
+15.4.2	(КПЗ)	Взятка должностному лицу	До 5 месяцев (до 25 мин)
+15.5	(FP)	Халатность	1 год (60 мин)
+17.1	(FP)	Посягательство на жизнь сотрудника гос. организации	1 год (60 мин)
+17.2	(КПЗ)	Угроза расправой сотруднику гос. организации	До 5 месяцев (до 25 мин)
+17.3	(КПЗ)	Оскорбление сотрудника гос. структуры при исполнении	До 4 месяцев (до 20 мин)
+17.6	(КПЗ)	Неповиновение законному требованию сотрудника (FIB, LSPD, LSSD и др.)	До 5 месяцев (до 25 мин)
+17.6.1	(FP)	Неповиновение законному требованию губернатора, суда, прокурора	1 год (60 мин)
+17.7	(КПЗ)	Отказ от оплаты штрафа	До 8 месяцев (до 40 мин)
+17.8	(FP)	Попытка побега от сотрудника правоохранительных структур	1 год (60 мин)
+
+=== ПРАВИЛО МИРАНДЫ ===
+⚖️ Правило Миранды
+
+Вы имеете право хранить молчание. Всё, что вы скажете, может и будет использовано против вас.
+Вы имеете право на один телефонный звонок.
+Вы имеете право на адвоката. Если вам необходим адвокат, он будет для вас запрошен.
+Вы понимаете свои права?
+
+=== ПОРЯДОК ЗАДЕРЖАНИЯ ===
+🚓 Порядок задержания
+
+Надеть наручники
+
+Представить удостоверение / жетон / нашивку / бейдж
+
+Назвать статью и основания задержания
+
+Провести обыск (при надобности изъять нелегал)
+
+Зачитать Миранду
+
+Доставить человека в КПЗ или Federal Prison
+
+=== ОСНОВАНИЯ ДЛЯ ЗАДЕРЖАНИЯ ===
+📌 Основания для задержания
+
+Лицо застигнуто в момент совершения преступления
+
+Три и более свидетелей
+
+Есть видеодоказательства
+
+Имеется ордер на арест
+
+Наличие существенных фактов о виновности
+
+Законное требование Губернатора / Суда / Прокурора
+
+Нахождение в розыске
+
+=== ПОРЯДОК АРЕСТА ===
+⛓️ Порядок ареста
+
+Назначить причину и меру наказания
+
+Изъять нелегал, паспорт и телефон при посадке в FP
+
+Заполнить бланк ареста
+
+Поместить арестованного в место отбывания наказания
+
+=== 10-КОДЫ / РАДИО ===
+📻 Тен-коды
+
+10-0: Отмена
+10-1: Начинаю патрулирование
+10-2: Заканчиваю патрулирование
+10-3: Радиомолчание
+10-4: Сообщение принято
+10-5: Ретранслируйте Ваше сообщение
+10-6: Не принято
+10-7: Ожидайте
+10-10: Заступил на пост
+10-11: Покинул пост
+10-12: Состояние стабильное
+10-20: Местоположение …
+10-22: Сообщите также …
+10-23: На месте …
+10-24: Последнее задание выполнено
+10-26: Последняя информация (сообщение) отменяется
+10-30: Это не разрешается правилами связи
+10-31: Следую в место…
+10-32: Даю вам контроль…
+10-33: Сообщение о происшествии, бедствии…
+10-34: Нужна помощь
+10-35: Конфиденциальная информация
+10-37: Нужна техническая помощь
+10-38: Нужна “скорая помощь”
+10-39: Ваше сообщение передано
+10-48: Эвакуация
+10-50: Запрос разрешения на взлет
+10-51: Запрашивает разрешение на посадку
+10-65: Жду вашего следующего сообщения/задания
+10-67: Проникнувший задержан
+10-73: Разрешено
+10-74: Отказано
+10-75: Вы создаете помехи
+10-76: В пути
+10-77: Время прибытия
+10-99: Ситуация урегулирована
+10-100: Мне нужно отойти
+10-101: Какое состояние (Вы в безопасности?)
+10-106: Я в безопасности (Кто-либо другой в безопасности)
+
+
+------------------------------------------------------------------------------------------------------
+
+=== F10 МАКРОСЫ ===
+макросы F10 - настройки макросы вставить
+
+
+
+Название макроса	Код CTRL + C
+Ремни безопасности в машине	WyLQoNC10LzQvdC4IixbeyJpZCI6ImNoYXRfcnBfZG8iLCJwYXJhbXMiOlsi0KHRgNCw0LHQvtGC0LDQu9C4INGA0LXQvNC90Lgg0LHQtdC30L7Qv9Cw0YHQvdC+0YHRgtC4LCDQvdC40LrRgtC+INC90LUg0L/QvtGB0YLRgNCw0LTQsNC7LiJdfV1d
+Изьятие нелегала с человека	WyLQndC10LvQtdCz0LDQuyIsW3siaWQiOiJjaGF0X3JwX21lIiwicGFyYW1zIjpbItC00L7RgdGC0LDQuyDRgSDQv9GA0LDQstC+0LPQviDQutCw0YDQvNCw0L3QsCDRiNGC0LDQvdC+0LIg0L7QtNC90L7RgNCw0LfQvtCy0YvQtSDRgdGC0LXRgNC40LvRjNC90YvQtSDQv9C10YDRh9Cw0YLQutC4INC4INC90LDQtNC10Lsg0LjRhSDQvdCwINGA0YPQutC4Il19LHsiaWQiOiJjaGF0X3JwX21lIiwicGFyYW1zIjpbItC/0YDQvtGF0LvQvtC/0LDQuyDQstC10YDRhdC90LjQtSDQuCDQvdC40LbQvdC40LUg0YHQu9C+0Lgg0L7QtNC10LbQtNGLIEB0YXJnZXQiXX0seyJpZCI6ImNoYXRfcnBfbWUiLCJwYXJhbXMiOlsi0LTQvtGB0YLQsNC7INC30LjQvy3Qv9Cw0LrQtdGCINGBINC70LXQstC+0LPQviDQutCw0YDQvNCw0L3QsCDRiNGC0LDQvdC+0LIg0L/QvtGB0LvQtSDRh9C10LPQviDQvtGC0LrRgNGL0Lsg0LXQs9C+Il19LHsiaWQiOiJjaGF0X3JwX21lIiwicGFyYW1zIjpbItC90LXQttC90L4g0YHQu9C+0LbQuNC7INCy0YHQtSDQvdC10LvQtdCz0LDQu9GM0L3QvtC1INGBIEB0YXJnZXQg0LIg0LfQuNC/LdC/0LDQutC10YIiXX0seyJpZCI6ImNoYXRfcnBfZG8iLCJwYXJhbXMiOlsi0JLRgdC1INC90LXQu9C10LPQsNC70YzQvdGL0LUg0LLQtdGJ0Lgg0YEgQHRhcmdldCDQsiDQt9C40L8t0L/QsNC60LXRgtC1LiJdfSx7ImlkIjoiY2hhdF9ycF9tZSIsInBhcmFtcyI6WyLQt9Cw0LrRgNGL0Lsg0LfQuNC/LdC/0LDQutC10YIg0Lgg0YHQu9C+0LbQuNC7INCyINC70LXQstGL0Lkg0LrQsNGA0LzQsNC9INGI0YLQsNC90L7QsiJdfV1d
+Арест в КПЗ	WyLQkNGA0LXRgdGCIixbeyJpZCI6InBvbGljZV9hcnJlc3QiLCJwYXJhbXMiOltdfSx7ImlkIjoiY2hhdF9ycF9kbyIsInBhcmFtcyI6WyLQmtC70Y7Rhy3QutCw0YDRgtCwINC30LDQutGA0LXQv9C70LXQvdCwINC90LDRhdC+0LTQuNGC0YHRjyDQsiDQv9GA0LDQstC+0Lwg0LrQsNGA0LzQsNC90LUg0YjRgtCw0L3QvtCyLiJdfSx7ImlkIjoiY2hhdF9ycF9tZSIsInBhcmFtcyI6WyLQtNC+0YHRgtCw0Lsg0LrQu9GO0Yct0LrQsNGA0YLRgyDQuCDQv9GA0L7QstGR0Lsg0L/QvtC0INC80LDQs9C90LjRgtC90L7QvNGDINC30LDQvNC60YMg0JrQn9CXIl19LHsiaWQiOiJjaGF0X3JwX21lIiwicGFyYW1zIjpbItGB0L3Rj9C7INC90LDRgNGD0YfQvdC40LrQuCDRgSDQt9Cw0LTQtdGA0LbQsNC90L3QvtCz0L4g0Lgg0L/QvtCy0LXRgdC40Lsg0L3QsCDRgtC40LrRgtC40YfQtdGB0LrQuNC5INC/0L7Rj9GBIl19LHsiaWQiOiJjaGF0X3JwX21lIiwicGFyYW1zIjpbItC30LDQstC10Lsg0LfQsNC00LXRgNC20LDQvdC90L7Qs9C+INC4INC30LDQutGA0YvQuyDQtNCy0LXRgNGMINC30LAg0L3QuNC8Il19XV0=
+Арест в FP	"WyLQkNGA0LXRgdGCINCyINCk0J8iLFt7ImlkIjoiY2hhdF9ycF9tZSIsInBhcmFtcyI6WyLQvdCw0YfQsNC7INC+0YTQvtGA0LzQu9C10L3QuNC1INCx0LvQsNC90LrQsCDQsNGA0LXRgdGC0LAg0LIg0L7RgtC90L7RiNC10L3QuNC4IEB0YXJnZXQiXX0seyJpZCI6ImNoYXRfcnBfZG8iLCJwYXJhbXMiOlsi0JrQu9GO0Yct0LrQsNGA0YLQsCDQt9Cw0LrRgNC10L/Qu9C10L3QsCDQvdCw0YXQvtC00LjRgtGB0Y8g0LIg0LvQtdCy0L7QvCDQutCw0YDQvNCw0L3QtSDRiNGC0LDQvdC+0LIuIl19LHsiaWQiOiJjaGF0X3JwX21lIiwicGFyYW1zIjpbItC00L7RgdGC0LDQuyDQutC70Y7Rhy3QutCw0YDRgtGDINC4INC/0YDQvtCy0ZHQuyDQv9C+INC80LDQs9C90LjRgtC90L7QvNGDINC30LDQvNC60YMg0KHQu9C10LTRgdGC0LLQtdC90L3QvtCz0L4g0LjQt9C+0LvRj9GC0L7RgNCwIl19LHsiaWQiOiJjaGF0X3JwX21lIiwicGFyYW1zIjpbItGB0L3Rj9C7INC90LDRgNGD0YfQvdC40LrQuCDRgSDQt9Cw0LTQtdGA0LbQsNC90L3QvtCz0L4g0Lgg0L/QvtCy0LXRgdC40Lsg0L3QsCDRgtCw0LrRgtC40YfQtdGB0LrQuNC5INC/0L7Rj9GBIl19LHsiaWQiOiJjaGF0X3JwX21lIiwicGFyYW1zIjpbItC30LDQstC10Lsg0LfQsNC00LXRgNC20LDQvdC90L7Qs9C+INC4INC30LDQutGA0YvQuyDQtNCy0LXRgNGMINC60LvRjtGHINC60LDRgNGC0L7QuSDQt9CwINC90LjQvCJdfV1d
+ 
+"
+Жетон на груди	WyLQltC10YLQvtC9IixbeyJpZCI6ImNoYXRfcnBfdG9kbyIsInBhcmFtcyI6WyLQryBMdWNpZW4gTGFWaWJlLCDRgdC+0YLRgNGD0LTQvdC40LogTFNTRCDQvtGC0LTQtdC7IFNQRCrRg9C60LDQt9Cw0LIg0L/QsNC70YzRhtC10Lwg0L3QsCDQttC10YLQvtC9LCDQt9Cw0LrRgNC10L/Qu9C10L3QvdGL0Lkg0L3QsCDQs9GA0YPQtNC4OiBbTFNTRC04MTI5fFNQRF0iXX1dXQ==
+Выдача штрафа	WyLQqNGC0YDQsNGEIixbeyJpZCI6InBvbGljZV9maW5lIiwicGFyYW1zIjpbXX0seyJpZCI6ImNoYXRfcnBfZG8iLCJwYXJhbXMiOlsi0JfQsNC/0LjRgdCw0L3QsNGPINC60L3QuNC20LrQsCDRgSDRgtC40LrQtdGC0LDQvNC4INCyINC/0YDQsNCy0L7QvCDQutCw0YDQvNCw0L3QtSDQsdGA0Y7Qui4iXX0seyJpZCI6ImNoYXRfcnBfbWUiLCJwYXJhbXMiOlsi0LTQvtGB0YLQsNC7INC40Lcg0LrQsNGA0LzQsNC90LAg0LrQvdC40LbQutGDINC4INC90LDRh9Cw0Lsg0LfQsNC/0L7Qu9C90Y/RgtGMINGC0LjQutC10YIiXX0seyJpZCI6ImNoYXRfcnBfZG8iLCJwYXJhbXMiOlsi0KjRgtGA0LDRhNC90L7QuSDRgtC40LrQtdGCINC30LDQv9C+0LvQvdC10L0g0LIg0L7RgtC90L7RiNC10L3QuNC4IEB0YXJnZXQuIl19LHsiaWQiOiJjaGF0X3JwX21lIiwicGFyYW1zIjpbItC+0YLQvtGA0LLQsNC7INGC0LjQutC10YIg0LjQtyDQutC90LjQttC60Lgg0Lgg0L/RgNC+0YLRj9C90YPQuyDQtdCz0L4g0YfQtdC70L7QstC10LrRgyDQv9C10YDQtdC0INGB0L7QsdC+0LkiXX0seyJpZCI6ImNoYXRfcnBfbWUiLCJwYXJhbXMiOlsi0LfQsNC/0L7Qu9C90LjQuyDQutC+0L/QuNGOINGI0YLRgNCw0YTQvdC+0LPQviDRgtC40LrQtdGC0LAsINC+0YLQvtGA0LLQsNC7INC10LPQviDQuCDRg9Cx0YDQsNC7INCyINC60LDRgNC80LDQvSJdfV1d
+Мегафон в чат IC	WyLQnNC10LPQsNGE0L7QvSIsW3siaWQiOiJjaGF0X21lZ2Fmb24iLCJwYXJhbXMiOlsi0JjQvdGB0L/QtdC60YLQvtGAIExlc3RlciBGYXJsb3cg0YLRgNC10LHRg9C10YIg0LLQsNGBINC+0YHRgtCw0L3QvtCy0LjRgtGB0Y8g0Lgg0L/RgNC40LbQsNGC0YHRjyDQuiDQvtCx0L7Rh9C40L3QtSEiXX0seyJpZCI6ImNoYXRfbWVnYWZvbiIsInBhcmFtcyI6WyLQl9Cw0LPQu9GD0YjQuNGC0LUg0LTQstC40LPQsNGC0LXQu9GMINC4INCy0YvQudC00LXRgtC1INGBINCw0LLRgtC+ISJdfSx7ImlkIjoiY2hhdF9tZWdhZm9uIiwicGFyYW1zIjpbItCV0YHQu9C4INCy0Ysg0L3QtSDQstGL0L/QvtC70L3QuNGC0LUg0LTQsNC90L3Ri9C1INGC0YDQtdCx0L7QstCw0L3QuNC1INC80Ysg0L7RgtC60YDQvtC10Lwg0L7Qs9C+0L3RjCDQuNC3INC+0YDRg9C20LjRjyDQv9C+INCy0LDQvC4iXX1dXQ==
+Отыгровка на ордер для чп	WyLQkNC60YLQuNCy0L3QvtC1INGH0L8iLFt7ImlkIjoiY2hhdF9ycF9tZSIsInBhcmFtcyI6WyLQtNC+0YHRgtCw0Lsg0L/Qu9Cw0L3RiNC10YIsINC+0YLQutGA0YvQuyDQvdCwINC90ZHQvCDQvtGE0YTQuNGG0LjQsNC70YzQvdGL0Lkg0YHQsNC50YIg0JzQuNC90LjRgdGC0LXRgNGB0YLQstCwINCd0LDRhtC40L7QvdCw0LvRjNC90L7QuSDQkdC10LfQvtC/0LDRgdC90L7RgdGC0LgiXX0seyJpZCI6ImNoYXRfcnBfbWUiLCJwYXJhbXMiOlsi0L3QsNC20LDQsiDQvdCwINCy0LrQu9Cw0LTQutGDLCDQv9C10YDQtdGI0LXQuyDQvdCwINGB0YLRgNCw0L3QuNGG0YMg0LDQutGC0LjQstC90YvRhSDRg9C60LDQt9C+0LIg0LzQuNC90LjRgdGC0LXRgNGB0YLQstCwLCDQv9C+0LrQsNC30LDQuyDRh9C10LvQvtCy0LXQutGDINCw0LrRgtC40LLQvdC+0LUg0L/QvtGB0YLQsNC90L7QstC70LXQvdC40LUiXX0seyJpZCI6ImNoYXRfcnBfZG8iLCJwYXJhbXMiOlsi0J3QsCDQv9C70LDQvdGI0LXRgtC1INC+0YLQutGA0YvRgiDRg9C60LDQtyDQvtCxINCw0LrRgtC40LLQvdC+0Lwg0YfQvyAtIFwi0J7QoNCU0JXQoCDihJZTRS0wMTFcIiAiXX1dXQ==
+Реанимация аптечкой	WyLQoNC10LDQvdC40LzQsNGG0LjRjyIsW3siaWQiOiJjaGF0X3JwX2RvIiwicGFyYW1zIjpbItCd0LAg0L/QvtGP0YHQtSDQstC40YHQuNGCINGB0YPQvNC60LAg0YEg0LDQv9GC0LXRh9C60L7QuS4iXX0seyJpZCI6ImVtc19oZWFsdXAiLCJwYXJhbXMiOltdfSx7ImlkIjoiY2hhdF9ycF9tZSIsInBhcmFtcyI6WyLRgNCw0YHRgdGC0LXQs9C90YPQuyDRgdGD0LzQutGDLCDQtNC+0YHRgtCw0Lsg0LjQtyDQvdC10ZEg0L3QvtCy0YvQtSDQvNC10LQu0L/QtdGA0YfQsNGC0LrQuCDQuCDQvdCw0LTQtdC7INC90LAg0YDRg9C60LgiXX0seyJpZCI6ImNoYXRfcnBfbWUiLCJwYXJhbXMiOlsi0L7RgdC80L7RgtGA0LXQuyBAdGFyZ2V0LCDQv9GA0L7QstC10YDQuNC7INC/0YPQu9GM0YEsINC00YvRhdCw0L3QuNC1INC4INGA0LXQsNC60YbQuNGOINC30YDQsNGH0LrQvtCyIl19LHsiaWQiOiJjaGF0X3JwX2RvIiwicGFyYW1zIjpbIkB0YXJnZXQg0LHQtdC3INGB0L7Qt9C90LDQvdC40Y8sINC/0YPQu9GM0YEsINC00YvRhdCw0L3QuNC1INC4INGA0LXQsNC60YbQuNGPINC30YDQsNGH0LrQvtCyINC+0YLRgdGD0YLRgdGC0LLRg9GO0YIuIl19LHsiaWQiOiJjaGF0X3JwX21lIiwicGFyYW1zIjpbItC40Lcg0YHRg9C80LrQuCDQtNC+0YHRgtCw0Lsg0LHQuNC90YIg0Lgg0YHQtNC10LvQsNC7INC/0YDQvtC60LvQsNC00LrRgyDQvdCwINGA0L7RgiBAdGFyZ2V0Il19LHsiaWQiOiJjaGF0X3JwX2RvIiwicGFyYW1zIjpbItCR0LjQvdGCINC90LDQu9C+0LbQtdC9LiJdfSx7ImlkIjoiY2hhdF9ycF9tZSIsInBhcmFtcyI6WyLQv9GA0L7QstC+0LTQuNGCINC40YHQutGD0YHRgdGC0LLQtdC90L3QvtC1INC00YvRhdCw0L3QuNC1INC4INC90LXQv9GA0Y/QvNC+0Lkg0LzQsNGB0YHQsNC2INGB0LXRgNC00YbQsCJdfV1d
+Нелегал с земли в зип пакет	WyLQndC10LvQtdCz0LDQuyDRgSDQt9C10LzQu9C4IixbeyJpZCI6ImNoYXRfcnBfbWUiLCJwYXJhbXMiOlsi0LTQvtGB0YLQsNC7INC+0LTQvdC+0YDQsNC30L7QstGL0LUg0YHRgtC10YDQuNC70YzQvdGL0LUg0L/QtdGA0YfQsNGC0LrQuCDRgSDQv9GA0LDQstC+0LPQviDQutCw0YDQvNCw0L3QsCDRiNGC0LDQvdC+0LIg0Lgg0L3QsNC00LXQuyDQuNGFIl19LHsiaWQiOiJjaGF0X3JwX21lIiwicGFyYW1zIjpbItC00L7RgdGC0LDQuyDQt9C40L8t0L/QsNC60LXRgiDQuCDQvtGC0LrRgNGL0Lsg0LXQs9C+Il19LHsiaWQiOiJjaGF0X3JwX21lIiwicGFyYW1zIjpbItGB0LvQvtC20LjQuyDRgNC10LfQutC+INCy0YHQtSDQvdC10LvQtdCz0LDQu9GM0L3QvtC1INC+0YDRg9C20LjQtSDQsiDQt9C40L8t0L/QsNC60LXRgiDQuCDQt9Cw0LrRgNGL0Lsg0LXQs9C+Il19LHsiaWQiOiJjaGF0X3JwX2RvIiwicGFyYW1zIjpbItCS0YHQtSDQvdC10LvQtdCz0LDQu9GM0L3QvtC1INC+0YDRg9C20LjQtSDQsiDQt9C40L8t0L/QsNC60LXRgtC1LiJdfSx7ImlkIjoiY2hhdF9ycF9tZSIsInBhcmFtcyI6WyLQt9Cw0LrRgNC10L/QuNC7INC30LjQvy3Qv9Cw0LrQtdGCINC90LAg0YLQsNC60YLQuNGH0LXRgdC60L7QvCDQv9C+0Y/RgdC1Il19XV0=
+Показ записи по РП прокурору и адвокату	WyLQn9C+0LrQsNC3INC30LDQv9C40YHQuCIsW3siaWQiOiJjaGF0X3JwX21lIiwicGFyYW1zIjpbItC00L7RgdGC0LDQuyDRhNC70LXRiC3QutCw0YDRgtGDINGBINCx0L7QtNC4LdC60LDQvNC10YDRiyDQvdCwINCz0YDRg9C00LgiXX0seyJpZCI6ImNoYXRfcnBfbWUiLCJwYXJhbXMiOlsi0LTQvtGB0YLQsNC7INGA0LDQsdC+0YfQuNC5INC/0LvQsNC90YjQtdGCINC40Lcg0L3QsNGC0LXQu9GM0L3QvtC5INC/0L7QtNGB0YPQvNC60Lgg0Lgg0LLRgdGC0LDQstC40Lsg0YTQu9C10Ygt0LrQsNGA0YLRgyDQsiDQv9C70LDQvdGI0LXRgiJdfSx7ImlkIjoiY2hhdF9ycF9tZSIsInBhcmFtcyI6WyLQt9Cw0YjQtdC7INCyINC/0YDQvtCy0L7QtNC90LjQuiDQv9C70LDQvdGI0LXRgtCwINC4INC90LDRiNC10Lsg0YLQsNC8INGE0LvQtdGILdC60LDRgNGC0YMiXX0seyJpZCI6ImNoYXRfcnBfbWUiLCJwYXJhbXMiOlsi0L3QsNGI0LXQuyDQstC40LTQtdC+INC30LAg0L3QtdC+0LHRhdC+0LTQuNC80YvQuSDQv9C10YDQuNC+0LQg0L/QviDRgtC10LrRg9GJ0LXQuSDRgdC40YLRg9Cw0YbQuNC4INC4INCy0LrQu9GO0YfQuNC7INC10LPQviJdfSx7ImlkIjoiY2hhdF9ycF9tZSIsInBhcmFtcyI6WyLQv9GA0L7QvNC+0YLQsNC7INCy0LjQtNC10L7Qt9Cw0L/QuNGB0Ywg0LTQviDQvdCw0YfQsNC70LAg0L3QtdC+0LHRhdC+0LTQuNC80L7Qs9C+INC80L7QvNC10L3RgtCwINGB0LjRgtGD0LDRhtC40LgiXX0seyJpZCI6ImNoYXRfcnBfZG8iLCJwYXJhbXMiOlsi0JLQuNC00LXQvtC30LDQv9C40YHRjCDQvdCw0YfQsNC70LAg0L/RgNC+0LjQt9Cy0L7QtNC40YLRjNGB0Y8uIl19LHsiaWQiOiJjaGF0X3JwX21lIiwicGFyYW1zIjpbItC90LDRh9Cw0Lsg0L/QvtC60LDQt9GL0LLQsNGC0Ywg0LLQuNC00LXQvtC30LDQv9C40YHRjCDQstGB0LXQvCDRgdGD0LHRitC10LrRgtCw0Lwg0LfQsNC00LXRgNC20LDQvdC40Y8iXX0seyJpZCI6ImNoYXRfcnBfZG8iLCJwYXJhbXMiOlsi0JLRgdC1INGD0YfQsNGB0L3QuNC60Lgg0LfQsNC00LXRgNC20LDQvdC40Y8g0LLQuNC00Y/RgiDQstC40LTQtdC+0LfQsNC/0LjRgdGMPyJdfV1d
+Предоставление телефонного звонка	WyLQn9GA0LXQtNC+0YHRgtCw0LLQuNGC0Ywg0YLQtdC70LXRhNC+0L0iLFt7ImlkIjoiY2hhdF9ycF9tZSIsInBhcmFtcyI6WyLQvtGC0YHRgtC10LPQvdGD0Lsg0L7QtNC90L4g0LrQvtC70YzRhtC+INC90LDRgNGD0YfQvdC40LrQsCDRgSBAdGFyZ2V0Il19LHsiaWQiOiJjaGF0X3JwX21lIiwicGFyYW1zIjpbItC/0L7RgdC70LUg0YfQtdCz0L4g0LvQtdCz0LrQuNC8INC00LLQuNC20LXQvdC40LXQvCDQv9GA0LjRgdGC0LXQs9C90YPQuyDRgdCy0L7QsdC+0LTQvdC+0LUg0LrQvtC70YzRhtC+INC90LDRgNGH0L3QuNC60LAg0Log0YHQtdCx0LUiXX0seyJpZCI6InBvbGljZV9jdWZmIiwicGFyYW1zIjpbXX1dXQ==
+Проверка угона	WyLQo9Cz0L7QvSDQsNCy0YLQviIsW3siaWQiOiJjaGF0X3JwX2RvIiwicGFyYW1zIjpbItCd0LAg0L/Qu9C10YfQtSDQstC40YHQuNGCINGB0YPQvNC60LAg0YHQviDRgdC/0LXRhtGB0YDQtdC00YHRgtCy0LDQvNC4LiJdfSx7ImlkIjoiY2hhdF9ycF9tZSIsInBhcmFtcyI6WyLQvtGC0LrRgNGL0Lso0LApINGB0YPQvNC60YMg0YHQviDRgdC/0LXRhtGB0YDQtdC00YHRgtCy0LDQvNC4INC4INCy0LfRj9C7KNCwKSDQuNC3INC90LXQtSDQvNCw0LPQvdC40YLQvdGL0Lkg0L/QvtGA0L7RiNC+0LoiXX0seyJpZCI6ImNoYXRfcnBfbWUiLCJwYXJhbXMiOlsi0L7QsdGA0LDQsdC+0YLQsNC7KNCwKSDQvNCw0LPQvdC40YLQvdGL0Lwg0L/QvtGA0L7RiNC60L7QvCDQt9Cw0LzQvtC6INC00LLQtdGA0Lgg0LDQstGC0L7QvNC+0LHQuNC70Y8iXX0seyJpZCI6ImNoYXRfcnBfdHJ5IiwicGFyYW1zIjpbItC+0LHQvdCw0YDRg9C20LjQuyjQsCkg0YHQu9C10LTRiyDQstC30LvQvtC80LAg0LIg0LfQsNC80LrQtSJdfSx7ImlkIjoiY2hhdF9ycF9tZSIsInBhcmFtcyI6WyLQstC30Y/QuyjQsCkg0LjQtyDRgdGD0LzQutC4INC70YPQv9GDINC4INCy0L3QuNC80LDRgtC10LvRjNC90L4g0L7RgdC80L7RgtGA0LXQuyjQsCkg0LTQstC10YDRjCDQvdCwINGB0LvQtdC00Ysg0L/QvtCy0YDQtdC20LTQtdC90LjRjyDQt9Cw0LzQutCwIl19LHsiaWQiOiJjaGF0X3JwX3RyeSIsInBhcmFtcyI6WyLQvdCw0YjQtdC7KC3Qu9CwKSDRgdC70LXQtNGLINC/0L7QstGA0LXQttC00LXQvdC40Y8g0LfQsNC80LrQsCDQuNC90L7RgNC+0LTQvdGL0Lwg0L/RgNC10LTQvNC10YLQvtC8Il19LHsiaWQiOiJjaGF0X3JwX21lIiwicGFyYW1zIjpbItGD0LHRgNCw0Lso0LApINGB0L/QtdGG0YHRgNC10LTRgdGC0LLQsCDQvtCx0YDQsNGC0L3QviDQsiDRgdGD0LzQutGDINC4INC30LDQutGA0YvQuyjQsCkg0LXQtSJdfV1d
+Правило Миранды	WyLQvNC40YDQuNC90LTQsCIsW3siaWQiOiJjaGF0X2RlZiIsInBhcmFtcyI6WyLQktGLINC40LzQtdC10YLQtSDQv9GA0LDQstC+INGF0YDQsNC90LjRgtGMINC80L7Qu9GH0LDQvdC40LUuINCS0YHRkSwg0YfRgtC+INCy0Ysg0YHQutCw0LbQtdGC0LUsINC80L7QttC10YIg0Lgg0LHRg9C00LXRgiDQuNGB0L/QvtC70YzQt9C+0LLQsNC90L4g0L/RgNC+0YLQuNCyINCS0LDRgS4iXX0seyJpZCI6ImNoYXRfZGVmIiwicGFyYW1zIjpbItCS0Ysg0LjQvNC10LXRgtC1INC/0YDQsNCy0L4g0L3QsCDQvtC00LjQvSDRgtC10LvQtdGE0L7QvdC90YvQuSDQt9Cy0L7QvdC+0LouINCi0LDQutC20LUg0JLRiyDQuNC80LXQtdGC0LUg0L/RgNCw0LLQviDQvdCwINCw0LTQstC+0LrQsNGC0LAuIl19LHsiaWQiOiJjaGF0X2RlZiIsInBhcmFtcyI6WyLQldGB0LvQuCDQstCw0Lwg0L3QtdC+0LHRhdC+0LTQuNC8INCw0LTQstC+0LrQsNGCLCDQvtC9INCx0YPQtNC10YIg0LTQu9GPINCS0LDRgSDQt9Cw0L/RgNC+0YjQtdC9LiAiXX0seyJpZCI6ImNoYXRfZGVmIiwicGFyYW1zIjpbItCS0Ysg0L/QvtC90LjQvNCw0LXRgtC1INGB0LLQvtC4INC/0YDQsNCy0LA/XCIiXX1dXQ==
+Ночная бабочка	WyLQn9GA0L7RgdGC0LjRgtGD0YLQutCwIixbeyJpZCI6ImNoYXRfcnBfbWUiLCJwYXJhbXMiOlsi0LTQvtGB0YLQsNC7INC/0LvQsNC90YjQtdGCINGBINCx0LDQt9C+0Lkg0LTQsNC90L3Ri9GFINC/0YDQvtGB0YLQuNGC0YPRgtC+0LoiXX0seyJpZCI6ImNoYXRfcnBfZG8iLCJwYXJhbXMiOlsi0J/Qu9Cw0L3RiNC10YIg0LIg0YDRg9C60LDRhS4iXX0seyJpZCI6ImNoYXRfcnBfbWUiLCJwYXJhbXMiOlsi0YHQstC10YDQuNC7INC70LjRhtC+INCz0YDQsNC20LTQsNC90LrQuCDQvdCw0L/RgNC+0YLQuNCyINGBINCx0LDQt9C+0Lkg0LTQsNC90L3Ri9GFINC/0YDQvtGB0YLQuNGC0YPRgtC+0LoiXX0seyJpZCI6ImNoYXRfcnBfdHJ5IiwicGFyYW1zIjpbItC70LjRhtCwINGB0YXQvtC20LgiXX1dXQ==
+Опознание по планшету в розыске	WyLQntGC0YvQs9GA0L7QstC60LAg0L7Qv9C+0LfQvdCw0L3QuNGPIixbeyJpZCI6ImNoYXRfcnBfZG8iLCJwYXJhbXMiOlsi0JIg0L/QvtC00YHRg9C80LrQtSDQu9C10LbQuNGCINC/0LvQsNC90YjQtdGCLiJdfSx7ImlkIjoiY2hhdF9ycF9tZSIsInBhcmFtcyI6WyLQtNC+0YHRgtCw0Lsg0L/Qu9Cw0L3RiNC10YIg0LjQtyDQv9C+0LTRgdGD0LzQutC4Il19LHsiaWQiOiJjaGF0X3JwX2RvIiwicGFyYW1zIjpbItCf0LvQsNC90YjQtdGCINCyINGA0YPQutCw0YUuIl19LHsiaWQiOiJjaGF0X3JwX21lIiwicGFyYW1zIjpbItC30LDRiNC10Lsg0LIg0LHQsNC30YMg0LTQsNC90L3Ri9GFINC+0YDQuNC10L3RgtC40YDQvtCy0L7QuiDQstCy0LXQtNGPINC70L7Qs9C40L0g0Lgg0L/QsNGA0L7Qu9GMIl19LHsiaWQiOiJjaGF0X3JwX2RvIiwicGFyYW1zIjpbItCS0YXQvtC0INCy0YvQv9C+0LvQvdC10L0uIl19LHsiaWQiOiJjaGF0X3JwX21lIiwicGFyYW1zIjpbItC90LDQv9GA0LDQstC40Lsg0LrQsNC80LXRgNGDINC/0LvQsNC90YjQtdGC0LAg0L3QsCBAdGFyZ2V0Il19LHsiaWQiOiJjaGF0X3JwX2RvIiwicGFyYW1zIjpbItCh0LrQsNC90LjRgNC+0LLQsNC90LjQtS4uLiJdfSx7ImlkIjoiY2hhdF9ycF9kbyIsInBhcmFtcyI6WyLQk9GA0LDQttC00LDQvdC40L0g0L3QsNGF0L7QtNC40YLRgdGPINCyINGA0L7Qt9GL0YHQutC1LiJdfV1d
+Для Старшего состава	
+Опознание сотрудников при требовании прокурора	WyLQntC/0L7Qt9C90LDQvdC40LUg0LTQu9GPINC/0YDQvtC60YPRgNC+0YDQsCIsW3siaWQiOiJjaGF0X3JwX21lIiwicGFyYW1zIjpbItCy0LfRj9C7INGE0LvQtdGI0LrRgyDQuNC3INGA0YPQuiBAdGFyZ2V0INC4INCy0YHRgtCw0LLQuNC7INCyINC60L7QvNC/0YzRjtGC0LXRgCJdfSx7ImlkIjoiY2hhdF9ycF9tZSIsInBhcmFtcyI6WyLQvtGC0LrRgNGL0Lsg0LLQuNC00LXQviDRgSDRhNC70LXRiNC60Lgg0Lgg0L7Qt9C90LDQutC+0LzQuNC70YHRjyDRgSDQvdC40LwiXX0seyJpZCI6ImNoYXRfcnBfbWUiLCJwYXJhbXMiOlsi0LLQvdC40LzQsNGC0LXQu9GM0L3QviDQv9GA0LjRgdC80L7RgtGA0LXQstGI0LjRgdGMLCDQvtC/0L7Qt9C90LDQuyDRgdC+0YLRgNGD0LTQvdC40LrQvtCyIl19LHsiaWQiOiJjaGF0X3JwX2RvIiwicGFyYW1zIjpbItCh0L7RgtGA0YPQtNC90LjQutC4INC+0L/QvtC30L3QsNC90YsuIl19LHsiaWQiOiJjaGF0X3JwX21lIiwicGFyYW1zIjpbItC+0YLQutGA0YvQuyDQsdCw0LfRgyDQtNCw0L3QvdGL0YUg0Lgg0YHQutC+0L/QuNGA0L7QstCw0Lsg0LvQuNGH0L3Ri9C1INC00LXQu9CwINC+0L/QvtC30L3QsNC90L3Ri9GFINGB0L7RgtGA0YPQtNC90LjQutC+0LIg0L3QsCDRhNC70LXRiNC60YMiXX0seyJpZCI6ImNoYXRfcnBfbWUiLCJwYXJhbXMiOlsi0LLRi9C90YPQsiDRhNC70LXRiNC60YMg0LjQtyDRgNCw0LfRitC10LzQsCwg0L/QtdGA0LXQtNCw0Lsg0LXQtSBAdGFyZ2V0Il19XV0=
+Отправка личного дела, сотруднику прокуратуры	WyLQntGC0L/RgNCw0LLQutCwINC00LXQu9CwINCf0YDQvtC60YPRgNC+0YDRgyIsW3siaWQiOiJjaGF0X3JwX21lIiwicGFyYW1zIjpbItCw0LLRgtC+0YDQuNC30L7QstCw0LvRgdGPINCyINCx0LDQt9C1INC00LDQvdC90YvRhSAo0JLQkNCo0JAg0KTQoNCQ0JrQptCY0K8pIl19LHsiaWQiOiJjaGF0X3JwX21lIiwicGFyYW1zIjpbItC30LDRiNC10Lsg0LIg0LHQsNC30YMg0LTQsNC90L3Ri9GFINC00LXQuyAo0JLQkNCo0JXQmSDQpNCg0JDQmtCm0JjQmCkiXX0seyJpZCI6ImNoYXRfcnBfbWUiLCJwYXJhbXMiOlsi0L3QsNGI0LXQuyDQtNC10LvQviAo0JjQnNCvINCk0JDQnNCY0JvQmNCvIFvQn9CQ0KHQn9Ce0KDQol0pINC4INGB0LrQvtC/0LjRgNC+0LLQsNC7INC10LPQviJdfSx7ImlkIjoiY2hhdF9ycF9tZSIsInBhcmFtcyI6WyLQt9Cw0YjQtdC7INC90LAg0L/QvtGH0YLRgyDQuCDQstCy0LXQuyDQsNC00YDQtdGBINC/0L7Rh9GC0LAgKNCf0KDQntCa0KPQoNCe0KDQkCkiXX0seyJpZCI6ImNoYXRfcnBfbWUiLCJwYXJhbXMiOlsi0LLRgdGC0LDQstC40Lsg0YLRg9C00LAg0LvQuNGH0L3QvtC1INC00LXQu9C+ICjQmNCc0K8g0KTQkNCc0JjQm9CY0K8pINC4INC90LDQttCw0Lsg0LrQvdC+0L/QutGDINC+0YLQv9GA0LDQstC40YLRjCJdfSx7ImlkIjoiY2hhdF9ycF9kbyIsInBhcmFtcyI6WyLQn9C40YHRjNC80L4g0YPRgdC/0LXRiNC90L4g0L7RgtC/0YDQsNCy0LvQtdC90L3Qvi4iXX1dXQ==
+Для отправки RP письма	WyLQntGC0L/RgNCw0LLQutCwINC/0LjRgdGM0LzQsCIsW3siaWQiOiJjaGF0X3JwX2RvIiwicGFyYW1zIjpbItCi0LXQu9C10YTQvtC9INCyINGA0YPQutC1LiJdfSx7ImlkIjoiY2hhdF9ycF9tZSIsInBhcmFtcyI6WyLQt9Cw0YjQtdC7INC90LAg0L/QvtGH0YLRgyDQuCDQstCy0LXQuyDQsNC00YDQtdGBINC/0L7Qu9GD0YfQsNGC0LXQu9GPICPQn9Ce0KfQotCQIl19LHsiaWQiOiJjaGF0X3JwX2RvIiwicGFyYW1zIjpbItCQ0LTRgNC10YEg0LLQstC10LTQtdC9LiAiXX0seyJpZCI6ImNoYXRfcnBfbWUiLCJwYXJhbXMiOlsi0LLQstC10Lsg0YLQtdC60YHRgiDQv9C40YHRjNC80LAiXX0seyJpZCI6ImNoYXRfcnBfbWUiLCJwYXJhbXMiOlsi0L3QsNC20LDQuyDQutC90L7Qv9C60YMg0L7RgtC/0YDQsNCy0LjRgtGMINC/0LjRgdGM0LzQviJdfSx7ImlkIjoiY2hhdF9ycF9kbyIsInBhcmFtcyI6WyLQn9C40YHRjNC80L4g0YPRgdC/0LXRiNC90L4g0L7RgtC/0YDQsNCy0LvQtdC90L3Qvi4gIl19XV0=
+Снятие камер с вашей територии 	WyLQodC90Y/RgtC40Y8g0LfQsNC/0LjRgdC10Lkg0YEg0LrQsNC80LXRgCIsW3siaWQiOiJjaGF0X3JwX2RvIiwicGFyYW1zIjpbItCa0L7QvNC/0YzRjtGC0LXRgCDQstC60LvRjtGH0LXQvS4iXX0seyJpZCI6ImNoYXRfcnBfbWUiLCJwYXJhbXMiOlsi0LDQstGC0L7RgNC40LfQvtC40YDQvtCy0LDQu9GB0Y8g0LIg0L/RgNC+0LPRgNCw0LzQvNC1INC30LDQv9C40YHQtdC5INC60LDQvNC10YAg0KTQoNCQ0JrQptCY0K8iXX0seyJpZCI6ImNoYXRfcnBfbWUiLCJwYXJhbXMiOlsi0L3QsNGI0LXQuyDQt9Cw0L/QuNGB0Ywg0LfQsCAyMi4xMS4yMDIzINGBIDEwOjAwINC/0L4gMTE6MDAiXX0seyJpZCI6ImNoYXRfcnBfbWUiLCJwYXJhbXMiOlsi0YHQutC+0L/QuNGA0L7QstCw0Lsg0LTQsNC90L3Rg9GOINC30LDQv9C40YHRjCDQuCDQt9Cw0YjQtdC7INC90LAg0L/QvtGH0YLRgyJdfSx7ImlkIjoiY2hhdF9ycF9tZSIsInBhcmFtcyI6WyLQstCy0LXQuyDQsNC00YDQtdGB0LDRgiDQv9C+0YfRgtGLICPQn9Ce0KfQotCQIl19LHsiaWQiOiJjaGF0X3JwX21lIiwicGFyYW1zIjpbItCy0YHRgtCw0LLQuNC7INGB0LrQvtC/0LjRgNC+0LLQsNC90YPRjiDQt9Cw0L/QuNGB0Ywg0LIg0L/QuNGB0YzQvNC+INC4INC90LDQttCw0Lsg0LrQvdC+0L/QutGDINC+0YLQv9GA0LDQstC40YLRjCJdfSx7ImlkIjoiY2hhdF9ycF9kbyIsInBhcmFtcyI6WyLQn9C40YHRjNC80L4g0YEg0LfQsNC/0LjRgdGM0Y4g0YEg0LrQsNC80LXRgCDRg9GB0L/QtdGI0L3QviDQvtGC0L/RgNCw0LLQu9C10L3QvdC+LiJdfV1d
+Эвакуация авто в IC рацию.	WyLQrdCy0LDQutGD0LDRgtC+0YAiLFt7ImlkIjoiY2hhdF9mYWN0aW9uIiwicGFyYW1zIjpbItCt0LLQsNC60YPQsNGC0L7RgCDQstGL0LXQt9C20LDQtdGCINC90LAg0L/QvtC40YHQutC4INCx0YDQvtGI0LXQvdC90YvRhSDQvNCw0YjQuNC9ISJdfSx7ImlkIjoiY2hhdF9mYWN0aW9uIiwicGFyYW1zIjpbItCS0YHQtdC8INC30LDQvdGP0YLRjCDRgdCy0L7QuCwg0YfQtdGA0LXQtyAzMCDRgdC10LrRg9C90LQg0LLRgdC1INGB0LLQvtCx0L7QtNC90YvQtSDQsNCy0YLQviDQsdGD0LTRg9GCINGN0LLQsNC60YPQuNGA0L7QstCw0L3RiyEiXX0seyJpZCI6InNjcmlwdF93YWl0IiwicGFyYW1zIjpbIjkiXX0seyJpZCI6ImNoYXRfZmFjdGlvbiIsInBhcmFtcyI6WyLQktGB0LXQvCDQt9Cw0L3Rj9GC0Ywg0YHQstC+0Lgg0LDQstGC0L4sINGH0LXRgNC10LcgMjAg0YHQtdC60YPQvdC0INCy0YHQtSDRgdCy0L7QsdC+0LTQvdGL0LUg0LDQstGC0L4g0LHRg9C00YPRgiDRjdCy0LDQutGD0LjRgNC+0LLQsNC90YshIl19LHsiaWQiOiJzY3JpcHRfd2FpdCIsInBhcmFtcyI6WyI5Il19LHsiaWQiOiJjaGF0X2ZhY3Rpb24iLCJwYXJhbXMiOlsi0JLRgdC10Lwg0LfQsNC90Y/RgtGMINGB0LLQvtC4INCw0LLRgtC+LCDRh9C10YDQtdC3IDEwINGB0LXQutGD0L3QtCDQstGB0LUg0YHQstC+0LHQvtC00L3Ri9C1INCw0LLRgtC+INCx0YPQtNGD0YIg0Y3QstCw0LrRg9C40YDQvtCy0LDQvdGLISJdfSx7ImlkIjoic2NyaXB0X3dhaXQiLCJwYXJhbXMiOlsiNCJdfSx7ImlkIjoiY2hhdF9mYWN0aW9uIiwicGFyYW1zIjpbItCS0YHQtdC8INC30LDQvdGP0YLRjCDRgdCy0L7QuCDQsNCy0YLQviwg0YfQtdGA0LXQtyA1INGB0LXQutGD0L3QtCDQstGB0LUg0YHQstC+0LHQvtC00L3Ri9C1INCw0LLRgtC+INCx0YPQtNGD0YIg0Y3QstCw0LrRg9C40YDQvtCy0LDQvdGLISJdfSx7ImlkIjoic2NyaXB0X3dhaXQiLCJwYXJhbXMiOlsiNCJdfSx7ImlkIjoiY2hhdF9mYWN0aW9uIiwicGFyYW1zIjpbItCt0LLQsNC60YPQsNGC0L7RgCDQvdCw0YfQsNC7INGA0LDQsdC+0YLRgyEiXX0seyJpZCI6InNjcmlwdF93YWl0IiwicGFyYW1zIjpbIjkiXX0seyJpZCI6ImNoYXRfZmFjdGlvbiIsInBhcmFtcyI6WyLQrdCy0LDQutGD0LDRgtC+0YAg0LfQsNC60L7QvdGH0LjQuyDRgdCy0L7RjiDRgNCw0LHQvtGC0YMhIl19XV0=
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Как вызвать адвоката?
+в дискорд канале ЧП, запрос адвоката.
+ время на принятия адвоката 3-мин
+на приезд адвоката 5 мин.
+
+
+
+------------------------------------------------
+
+=== ПРАВИЛА ДЛЯ ГОС. ОРГАНИЗАЦИЙ ===
+Правила для государственных организаций
+
+Общие правила​
+
+1.1 Каждый сотрудник государственной структуры при обращении к гражданину или проведении в отношении него процессуальных действий обязан представиться и идентифицировать себя, предъявив удостоверение, жетон, нашивку или бейдж.
+1.2 Сотрудникам государственных структур при исполнении разрешено прибегать к физическому воздействию на гражданского, основываясь на действующей законодательной базе и окружающей обстановке.
+1.3 Лидеры и старший состав государственных фракций, а также все государственные служащие, принимающие участие в вынесении решений по наказанию других государственных служащих (судьи, прокуроры), обязаны следить за соблюдением законов и правомерным исполнением своих обязанностей всем составом государственных структур.
+1.3.1 Игнорирование указанными лицами нарушений от состава может быть расценено как NonRP.
+1.4 Каждый сотрудник, состоящий в государственной структуре, должен отыгрывать соответствующую ему роль в данной структуре. Также обязан следовать режиму Role Play, на котором основан проект.
+1.5 Боди-камера и очки Dion Smart Glasses фиксируют 180° от груди и сохраняют данные на microSD.
+Примечание: Боди-камера и очки Dion Smart Glasses фиксируют зону перед автомобилем, зеркало заднего вида и боковые стекла в транспорте.
+Примечание: Воздушный транспорт государственных фракций оснащён 360° видеорегистратором, установленным внизу. Для ведения записи с фракционного транспорта функциональная боди-камера не нужна.
+1.5.1 Изъятие записи с боди-камеры или очков Dion Smart Glasses требует РП-отыгровки.
+Примечание: Можно прикрепить бинокль к боди-камере или очкам Dion Smart Glasses для записи в увеличенном разрешении с обязательной РП-отыгровкой при использовании боди-камеры.
+1.6 Сотрудникам государственных структур запрещено хранить в личном транспорте, шкафу или на складе организации оружие, патроны, аптечки, бронежилеты, боевые стимуляторы и специальные средства, полученные с баланса их фракции или в ходе исполнения служебных обязанностей | Приравнивается к сливу склада.
+Исключение: Разрешено хранить оружие, не принадлежащее вашей фракции.
+Примечание: Ключевым фактором принадлежности оружия к фракции служит серийный номер.
+1.6.1 Запрещена передача имущества фракции игрокам, не состоящим в ней.
+Исключение: Государственный обмен, одобренный главным следящим за государственными фракциями.
+1.6.2 Запрещено присваивать себе материальные или любые другие средства, полученные в процессе исполнения должностных обязанностей. Например: неуплата комиссии за медкарты / неуплата пошлины за выданные лицензии, но не ограничиваясь ими | Обнуление персонажа.
+1.7 Запрещено присваивать и оставлять себе государственное имущество после увольнения в любых объёмах.
+1.8 Запрещено присваивать себе имущество, изъятое в ходе рейда на криминальную структуру.
+1.9 Сотрудникам государственных структур запрещено использовать в организационных соревновательных активностях государственное имущество, которое было получено в ходе исполнения служебных обязанностей.
+Пример: Точки влияния, война семей, захват острова Кайо-Перико.
+Исключения: Разрешено использовать оружие, приобретённое на Darkvito (в случае спорной ситуации, администрация вправе запросить доказательства покупки).
+1.10 Запрещено при исполнении использовать бронежилеты организации или бронежилеты, относящиеся к другой фракции.
+1.11 Любой сотрудник государственной структуры, исключая Weazel News, подлежащий аресту и заключению в КПЗ или в Федеральную тюрьму, должен быть уволен | Деморган от 60 минут / warn.
+Исключение: В случае отсутствия старшего состава арест может быть произведён без увольнения только в случае наличия ордера или постановления о прекращении трудовых отношений.
+Примечание: В комментарии обязательно указать номер ордера/указа/постановления.
+1.12 Каналы с отчётностью являются IC каналами в Discord'e фракции и могут использоваться в рамках РП при соответствующих отыгровках.
+Примечание: Вся кадровая деятельность, отображаемая в функциональных логах фракции, является IC информацией.
+1.13 Нарушая уставные нормы, такие как оскорбление при задержании, превышение полномочий и нарушение законодательной базы, сотрудник государственной структуры обязан опираться на окружающую его обстановку. Подобные действия в людных местах (на местах задержания, около полицейского участка, у здания FIB и т.п.), в случае грубого нарушения стандартной РП модели поведения государственного сотрудника, действия будут расцениваться как NonRP.
+Примечание: В случае ситуации 1 на 1 с задержанным разрешена грубая манера общения в нелюдных местах или во время проведения специальных операций.
+1.14 Сотрудники LSSD, LSPD, FIB, SASPA, NG, EMS и GOV при исполнении обязаны носить функциональную форму. Не допускается наличие семейного логотипа, макияжа и татуировок на лице, а также линз, покрывающих всю область глаза.
+Примечание: Грим или татуировки на лице допустимы, если они полностью скрыты маской (незначительная видимость допускается). Татуировка "Blackwork Shade Chin", задевающая часть нижней губы, не запрещена к ношению без маски.
+Примечание: Функциональная форма в FIB, при которой игрок остаётся в своей одежде и появляется бейджик сотрудника, не является функциональной формой.
+Исключение: Сотрудникам GOV разрешается носить одежду, соответствующую деловому стилю в соответствии с IC законодательством, при этом им запрещено иметь в инвентаре косяки, SPANK или алкоголь.
+1.14.1 В случае, если государственный сотрудник находится в бронежилете, вне зависимости от одежды или ситуации, он находится при исполнении и в случае нарушений может понести наказание.
+1.14.2 Национальной гвардии разрешено использовать маскировочный халат только на специальных операциях (поставки, рейды, захваты, похищения, нападения на поезд и подобное).
+1.15 Сотрудникам государственных структур запрещено находиться на титульных территориях криминальных организаций | Деморган 90 минут / warn.
+Исключение: Ордер на организацию, штурм.
+Исключение: Финансовая или прокурорская проверка от GOV.
+Исключение: Оказание медицинских услуг от EMS по приглашению.
+Исключение: Коммерческие услуги от WN по приглашению.
+1.16 Сотрудникам государственных структур запрещено использовать наркотики и алкоголь при исполнении или в рабочей форме.
+1.17 Обыскивать (изымать) задержанных на наличие боди-камеры разрешено лишь сотрудникам FIB при проведении силового допроса для избежание IC разбирательств против себя. В иных случаях использовать изъятие боди-камеры запрещено | Деморган 60 минут / warn.
+1.18 Сотрудники LSPD, LSSD, FIB, GOV, ARMY, SASPA обязаны вести видеозапись на каждый инцидент, связанный с правонарушением граждан или изменением уровня розыска, и хранить её в течение 72 часов. По истечении этого срока видеоматериал будет недоступен и не может быть использован в IC.
+Примечание: Если на игрока заведено дело, видеозапись должна храниться до завершения делопроизводства и не может быть удалена ранее.
+Примечание: Администрация вправе запросить видеозапись у государственного сотрудника.
+1.18.1 При наличии одобренной RP-Биографии на "Хакера", игрок может восстановить записи с камер в течение 7 суток (168 часов) с момента удаления записей.
+1.18.2 В случае объявления игрока в розыск или изменения статуса розыска, сотрудники LSPD, LSSD, FIB, GOV обязаны оставить отчёт по соответствующей форме в ЧП канале "💼┃выдача-розыска".
+1.19 Сотрудникам государственных структур запрещено брать взятки в людных местах, центральных улицах, под камерами | Деморган 90 минут / warn.
+Примечание: Государственных сотрудников не может быть больше двух.
+Примечание: Денежные средства берутся только в наличной форме. Запрещено содействовать человеку в момент получения взятки (подвозить до банка для снятия денег, подвозить к банкомату), даже если он сам этого просит.
+Примечание: Запрещено брать имуществом, эквивалентным сумме взятки. Например: оружие, патроны, SPANK, одежда и другое.
+Примечание: Государственному служащему запрещено продолжать задержание игрока после получения заранее согласованной суммы взятки в полном объёме.
+1.20 При остановке автомобиля по заданиям "автоугон" или "сутенёрство" запрещено увозить транспорт или NPC без проведения процессуальных действий над водителем угнанного автомобиля или сутенёром.
+Примечание: Запрещено забирать NPC по заданию "Сутенёрство" без предварительных удостоверяющих отыгровок или доказательств того, кем он является.
+1.20.1 Искать доказательства "автоугона" или "сутенёрства" разрешено только через /try и не более 2-х раз за конкретную RP-ситуацию.
+Примечание: В случае отсутствия доказательств по итогам проверки игрок не может быть задержан за нарушения, связанные с этими статьями УК/АК, а машина и NPC не могут быть изъяты.
+1.21 Администрация сервера в лице главного следящего/главной администрации вправе устанавливать любые правила и ограничения (в устной или письменной форме на конкретную ситуацию), руководствуясь RP-моделью сервера, для поддержания стабильной работы фракции и во избежание некорректной трактовки правил и IC законодательства.
+1.22 Максимальная премия любого сотрудника государственной структуры не может превышать 10% от суммы премии, выделенной на фракцию.
+1.23 Запрещено взимание любых денежных средств с сотрудников государственных фракций в рамках кадровых процессов, получения внутренних привилегий/лицензий и дисциплинарных мер (штрафы; плата за приём, увольнение, экзамены, лицензии и т.д.).
+Примечание: Санкции могут быть применены только в формате урезания или отмены премирования сотрудника.
+Исключение: Данное правило не распространяется на законодательные акты, нарушение пунктов которых влечёт за собой финансовую санкцию.
+Исключение: Сотрудники Weazel News, являющейся коммерческой организацией, имеют право взимать денежные средства за штрафы. Сумма штрафа должна быть перечислена на счёт фракции в полном объёме.
+1.23.1 Плата за любые коммерческие услуги, предоставляемые Weazel News, должна быть переведена на казну фракции или на фонд мероприятий.
+1.24 Пристёгивать игрока при помощи отыгровок без использования функционала разрешено только в следующих случаях:
+Пристегнуть одно кольцо для изъятия нелегала из багажника.
+Пристегнуть к чему-либо в карцере, чтобы избежать ситуаций с быстрым выбеганием через двери (наручники при этом функционально должны сниматься в обязательно порядке).
+Примечание: В иных случаях, допускается игнорирование отыгровки пристёгивания.
+1.24.1 Запрещено пристёгивать игроков к вертикальным поверхностям без необходимости, если это не обусловлено РП-ситуацией.
+Примечание: После окончания процесса пристёгивания необходимо обязательно отстегнуть игрока.
+
+Взаимодействие государственных фракций​
+
+2.1 Все государственные структуры зависимы от правительства нашего штата и подчиняются исключительно ему.
+2.2 Каждая структура выполняет свою функцию, которая была задана правительством. Всё, чем занимается государственная структура, делается во благо штата или самих граждан.
+2.3 Любые внутренние уставы и регламенты работы должны быть утверждены Правительством.
+2.4 Процесс заключения под стражу должен сопровождаться полноценно RP-ситуацией от начала до конца.
+2.5 Общее руководство специальными операциями, а также ЧП осуществляет руководство FIB (+8 ранг), а в их отсутствие руководство LSPD(+12 ранг)/LSSD(+8 ранг), если иное не установлено IC законодательством.
+2.6 Обязательной задачей силовых структур является оцепление периметра около захваченного здания/территории.
+2.7 Всё дистанционное IC общение государственных структур должно происходить исключительно через внутриигровую рацию.
+Исключение: Во время специальных операций, поставок, ЧП, ВП разрешается использовать специальные каналы дискорда ЧП для координации совместных действий между государственными структурами.
+
+LSPD & FIB & LSSD & GOV & ARMY & SASPA​
+
+3.1 Сотрудники FIB имеют право проводить незаконные допросы подозреваемых, кроме тех, в которых присутствуют действия сексуального характера. За проведение незаконных допросов сотрудники могут понести IC наказание.
+3.2 Сотрудники LSPD, LSSD, FIB имеют право останавливать транспортные средства с целью проверки на наличие нелегальных предметов и проверки личности водителя только в случае совершения гражданами штата правонарушения или ориентировки на ТС, при этом при обыске ТС должна быть видеофиксация проверки от и до.
+Примечание: Обыск допускается исключительно в присутствии владельца транспортного средства.
+3.3 Сотрудникам LSPD, LSSD, FIB, GOV, ARMY, SASPA при исполнении запрещено находиться в гетто меньше, чем в 2-ём на одной патрульной машине.
+Исключение: В случае, когда напарник находится в нокнутом состоянии, сотрудник обязан покинуть территорию.
+3.4 Изъятие оружия или нелегала должно происходить исключительно по функционалу (G-Работа-Обыск-Изъять нелегальное). Если изъятие производится из багажника автомобиля, оно должно происходить через водителя: водитель обязан переложить весь нелегал к себе, после чего государственный сотрудник изымает его функционально.
+3.5 Сотрудникам государственных структур при исполнении разрешено передвигаться только на фракционном государственном транспорте.
+Исключение: Транспорт находится в реестре зарегистрированных автомобилей согласно пункту 3.22 текущих правил.
+Примечание: Транспортным средством является любое средство для перемещение (авто, ролики, велосипед, скейтборд и т.п)
+Примечание: Агенты CID, детективы DB, сотрудники USSS имеют право в ходе Контрольной Закупки использовать личное транспортное средство.
+3.6 В процессе задержания нарушителя для его опознания и последующего оформления в Базу Данных необходимо снять с него маску.
+Примечание: Сотрудникам запрещено срывать маску без предварительного предупреждения игрока о необходимости её снять для предотвращения правонарушения.
+Исключение: Срывать маску без предупреждения разрешено, если игрок совершил иное преступление.
+3.7 ВЗХ, Вагонетка, Флаг, капт, бизвар - функциональные OOC мероприятия. Участников этих мероприятий запрещено арестовывать, задерживать и препятствовать в момент проведения этих мероприятий и за 15 минут до их начала.
+Исключение: В случаях, если игрок откровенно провоцирует задержание (открывает огонь, байтит или серьёзно нарушает закон), сотрудникам разрешается задерживать нарушителей независимо от таймлайна (до или после мероприятия). При спорных ситуациях государственные сотрудники должны будут предоставить видеозапись ситуации.
+3.7.1 Захват выпавшего армейского воздушного груза (аирдроп) - функциональное OOC мероприятие. Участников этого мероприятия запрещено арестовывать и задерживать в момент проведения мероприятия и после его окончания.
+3.8 Проводить рейды разрешается только при наличии ордера и с разрешения куратора соответствующей фракции.
+3.9 Сотрудникам государственных структур при исполнении запрещено нахождение и взаимодействие при исполнении с точками влияния, чёрным рынком, зоной ограблений в Палето-Бэй, зонами сдачи контрабанды, зонами сезонных мероприятий, зоной контейнеров с автомобилями (во время функционального аукциона), зоной аукционного дома, а также с зонами взятия и сдачи заданий "Автоугона" и "Девушек лёгкого поведения".
+Исключение: В случае погони разрешается заезжать в зону сдачи "Автоугона", "Девушек лёгкого поведения" и контрабанды с целью задержания нарушителей.
+3.9.1 Сотрудникам государственных структур при исполнении запрещено нахождение и какое-либо взаимодействие с игроками на территории MazeBank Arena и "Тренировочный комплекс".
+Исключение: Погоня, намеренная провокация сотрудника государственной структуры. Необходимо иметь полную видеозапись инцидента и по первому требованию предоставить её администрации.
+3.10 У сотрудников FIB, LSPD, LSSD, ARMY, GOV, SASPA имеется две пары наручников.
+3.11 Передача информации о предстоящей поставке представителям криминальных организаций разрешена только при взаимной договорённости между лидерами или их заместителями с обеих сторон и при условии проведения боя на равных условиях. В противном случае передача криминальным организациям информации о предстоящих поставках, как и слив самих поставок запрещены | Warn.
+3.12 Запрещено передвижение бронированной техники по городу, за городом или в гетто.
+Исключения: Сопровождение поставок, рейды, парады, кортежи правительства, террористические акты, согласованные мероприятия.
+3.13 Заместителям, а также лидерам государственных структур запрещено иметь любую связь с криминальным миром, заниматься криминальной деятельностью, а также поощрять подобную деятельность от своих коллег и/или подчинённых.
+3.14 Одному государственному сотруднику разрешается конвоировать до двух задержанных в патрульном автомобиле.
+Примечание: При массовых арестах, в одном патрульном автомобиле могут находиться 1 государственный сотрудник и 3 задержанных, при условии что патрульные авто едут колонной. (Пример: Рейд, массовые аресты около мэрии и т.д.)
+3.15 Запрещено конвоировать задержанных на воздушном транспорте, если количество сопровождающих сотрудников менее двух.
+3.16 Сотрудникам LSPD, LSSD, FIB запрещено отключать маячки (GPS-трекеры) других государственных сотрудников.
+3.17 Запрещено топить или уничтожать матовозки с любых поставок (поставка материалов / аптечек / анальгетиков).
+3.18 При просьбе вызова адвоката от задержанного необходимо реализовать его право на защиту в ЧП канале "📲┃вызов-адвоката" с соблюдением формы в закреплённом сообщении.
+Примечание: Если задержанный не требует адвоката до завершения стадии задержания, право на адвоката считается реализованным.
+Важно: Любая попытка обойти это правило, например, сразу заполнить бланк ареста, не предоставив возможность вызова адвоката, считается нарушением и влечёт наказание по пункту 1.10 правил проекта.
+3.19 Сотрудникам государственных структур запрещено в интерьерах EMS задерживать игроков, которые были убиты и появились в больнице.
+Исключение: Разрешено задержание игроков в случае провокации в сторону государственного сотрудника или игнорирования предупреждения о нарушении.
+Примечание: Под провокацией понимается оскорбление, проявление неуважения, попытка вывести на конфликт или злоупотребление этим пунктом. Нахождение в бронежилете или оружие за спиной не считаются провокацией.
+Примечание: Задержанием считается функциональное использование наручников на игрока.
+3.20 На усмотрение главного следящего за государственными фракциями и главного администратора, игрок может быть внесён в чёрный список государственных фракций за любые действия, которые подрывают развитие сервера или мешают нормальной работе фракций.
+Пояснение: Чёрный список — запрет на вступление в государственную фракцию, который распространяется на любого персонажа созданного игроком. Лидер или старший состав обязаны уволить или отказать в приёме игрока, который внесён в чёрный список, вне зависимости от ситуации.
+3.21 Сотрудникам LSPD, LSSD, FIB, SASPA запрещено указывать в комментарии при аресте игрока в КПЗ/ФТ или в причине штрафов любые причины, кроме номеров ордеров, номеров опознавательных знаков напарников, а также инкриминируемых статей законодательства.
+3.22 По усмотрению следящей администрации государственных фракций разрешено выделение дополнительных слотов для использования личного транспортного средства при условии последующего одобрения администрацией. Для регистрации автомобиля необходимо выполнить установленные требования. Условия регистрации, а также сама форма заявки указаны в ЧП канале "🚓┃регистрация-тс".
+Примечание: Информация о зарегистрированных автомобилях и перечень автомобилей, доступных для регистрации, указаны в специальном реестре.
+Примечание: Реестр зарегистрированных автомобилей обнуляется при назначении нового лидера фракции.
+Примечание: После одобрения регистрации запрещены изменения внешнего вида автомобиля. В противном случае регистрация считается недействительной.
+Примечание: Разрешён принт государственного образца, если он не нарушает пункт 2.9 правил проекта.
+3.23 При нарушении статей 6.8 и 6.9 административного кодекса сотрудники государственных структур обязаны опираться на следующий порядок действий: представиться → предупреждение → при игнорировании выписать штраф → при отказе от уплаты произвести задержание.
+Пример: Обыск по подозрению без фактического нарушения.
+Примечание: Любые попытки обхода этого порядка при помощи законодательства запрещены.
+Исключение: ЧП или ВП.
+3.24 Изъятие биологических/охотничьих ресурсов, превышающих норму согласно "Закону о добыче и сохранении биологических и охотничьих ресурсов", должно происходить исключительно через обмен с последующей сдачей ресурсов в багажник государственного назначения. Если изъятие производится из багажника автомобиля, оно должно происходить через водителя: водитель обязан переложить весь нелегал к себе, после чего государственный сотрудник изымает его через обмен. Запрещено присвоение изъятого имущества.
+Примечание: В конце недели изъятое имущество в обязательном порядке необходимо сдать представителям Government (ВЦГ, ГУТ).
+
+Emergency Medical Service​
+
+4.1 Сотрудники ЕМS обязаны оказывать медицинскую помощь всем на сервере безоговорочно.
+Исключение: Угроза нанесением вреда здоровью.
+4.2 Лидер EMS имеет право устанавливать регламент продажи медицинских услуг после согласования с Губернатором Штата и утверждения у куратора фракции или главного следящего за государственными фракциями.
+4.3 Сотрудники ЕМS обязаны осуществлять поставки аптечек во все государственные структуры.
+4.4 Сотрудникам EMS запрещено производить лечение без соответствующих RP-отыгровок, одобренных куратором фракции.
+4.5 Сотрудники ЕМS имеют право проводить проверки государственных организаций на предмет психического, физического здоровья сотрудников, а также санитарную инспекцию не чаще, чем 1 раз в неделю для каждой государственной организации.
+Исключение: Внеплановая медицинская проверка.
+4.6 Лидер EMS имеет право устанавливать сам регламент проведения проверки государственных организаций после согласования с Правительством Штата и утверждения у куратора фракции.
+4.7 Запрещено указывать причины в диагнозе пациента, которые нарушают РП модель / дают преимущество над игрокам в виде психический заболеваний и тому подобных болезней / несут в себе nonRP описание при выдаче медицинской карты.
+Исключение: Разрешено указывать психические или иные заболевания при одобренной РП ситуации или биографии.
+4.8 Следящая администрация вправе запросить доказательства о надлежавшем осмотре игроков во время медицинской проверки, регламентированной в Положение о медицинских проверках государственных организаций, для соблюдения РП-модели.
+Примечание: В случае запроса доказательства должны быть предоставлены в канале EMS: отчет-проверки.
+Примечание: Доказательства медицинской проверки должны храниться в течение 72 часов с момента её завершения.
+
+Government​
+
+5.1 Сотрудники Секретной Службы (USSS) имеют право при исполнении служебных обязанностей задерживать граждан штата, применяя физическую силу и специальные средства нелетального действия, при совершении ими правонарушений в Мэрии, на прилегающей к ней территории, на территории проведения мероприятий, при непосредственном сопровождении уполномоченных чинов, для дальнейшего передачи их в правоохранительные органы.
+5.2 Сотрудники Секретной Службы (USSS) имеют право применять оружие или специальные средства летального действия, заведомо предупредив гражданина в момент преследования, также при любой угрозе жизни по отношению к уполномоченному чину или охраняемому лицу, либо любому гражданину, которому угрожает опасность.
+5.3 Администрация правительства обязана проводить различные мероприятия малого масштаба не реже, чем 1 раз в день (ярмарка авто, викторина и т.д.).
+5.4 Администрация правительства обязана проводить различные мероприятия большого масштаба не реже, чем 1 раз в неделю.
+5.5 Администрация правительства имеет право устанавливать регламент обслуживания частных лиц.
+5.6 Администрация правительства обязана предоставлять возможность в регистрации и постановке на учёт юридических лиц.
+5.7 Администрация правительства обязана иметь в штате квалифицированного адвоката для представления интересов граждан в суде.
+5.8 Администрация правительства имеет право устанавливать регламент проверки государственных организаций.
+5.9 Количество проверок не может составлять более 2 в неделю на одну государственную организацию.
+Исключение: Внеплановые медицинские проверки или проверки от прокуратуры.
+5.10 Законодательная власть правительства обязана разработать и обеспечивать актуальность Конституции штата / Уголовного кодекса / Дорожного кодекса штата и последующих созданных ими кодексов или других нормативно правовых актов.
+5.11 Законодательная власть правительства обязана обговаривать и утверждать любое изменение или нововведение в законодательную базу с куратором фракции и главным следящим за государственными фракциями.
+5.12 Законодательная власть правительства имеет право принимать поправки, законопроекты и т.д., не идущие в разрез с RP логикой и реальным положением дел, после утверждения у куратора фракции и главного следящего за государственными фракциями.
+5.13 Администрация правительства имеет право расходовать бюджет государственно казны только в интересах штата, при этом уведомив куратора фракции и главного следящего за государственными фракциями.
+5.14 Администрация сервера в лице куратора фракции/главного следящего/главной администрации вправе устанавливать ограничения по взаимодействии с казной правительства на своё усмотрение, не уточняя конкретные цифры в правилах, руководствуясь текущей экономической ситуацией на сервере.
+Важно: Любой причинённый экономический вред серверу влечёт за собой перманентный бан и занесение в ЧС проекта.
+5.15 Сотрудникам Government запрещено удалять из DataBase дела задержанных или заключённых, без каких-либо IC постановлений, решений или апелляции суда. В ином случае информация будет восстановлена | 60 минут деморгана + Warn.
+5.16 Правительство обязано высылать государственного адвоката в Федеральную Тюрьму для представления прав, интересов граждан штата по первому запросу. Также в случае нахождения граждан в СИЗО, Правительство обязано отправить уполномоченного сотрудника прокуратуры для решения ситуации с заключённым (например, перевод в Федеральную Тюрьму, допрос или инициация судебного разбирательства).
+5.17 Сотрудникам прокуратуры, суда, министру внутренней безопасности и экономики и главам управлений этого министерства, а также губернатору и вице-губернатору запрещено иметь второго персонажа (твинк) в любой государственной структуре | Warn.
+5.18 Следящая администрация вправе отредактировать, ввести или отменить любой законодательный акт, который нарушает либо не соответствует RP модели проекта, правилам либо на субъективную оценку главного следящего за государственными фракциями может привести к невозможности работы фракций (либо отдельной фракции) с согласием Главного администратора.
+5.19 Главный следящий за государственными фракциями и куратор GOV имеют право отбирать кандидатов на такие должности как: Генеральный прокурор, Верховный судья, Министр Внутренней Безопасности и Экономики. Назначение данных должностных лиц осуществляется губернатором только с одобрения администрации.
+5.20 Следящая администрация вправе запросить видеофиксацию принятия экзамена, выдачи лицензий сотрудниками, регламентированными в указе Губернатора; дело/материалы судопроизводства, согласно которым было выдано постановление/ордер на арест/увольнение или иные действия, а также аргументацию принятия итогового решения, для проверки на соблюдение РП-модели.
+Примечание: В случае выявления отсутствия отыгровок или иных ООС нарушений в материалах дела, оно может быть откачено, а вынесший финальное решение игрок может понести наказание за NonRP поведение.
+Примечание: Отчёт экзамена обязательно должен содержать видеофиксацию в канале Government: отчёт лицензии.
+5.21 Представители судебного корпуса и прокуратуры обязаны приступить к рассмотрению поступивших жалоб, исков и апелляций в течение 24 часов с момента их подачи. Срок рассмотрения материалов не должен превышать 72 часов с момента взятия дела в работу, не включая проведение судебного заседания.
+Исключение: Продление установленных сроков допускается с одобрения куратора фракции или главного следящего за государственными фракциями.
+
+National Guard​
+
+6.1 Национальная гвардия обязана производить поставки материалов во все государственные фракции.
+6.2 Национальная гвардия имеет право задержать граждан штата за противоправные действия и доставить в участок к сотрудникам LSPD/FIB/LSSD или Федеральную тюрьму.
+6.3 Запрещено выдавать военный билет без соответствующего отчёта.
+6.3.1 Для получения военного билета игрок должен достигнуть 6 ранга и находиться во фракции не менее 7 суток, а для игроков, повышенных по дню блата до получения 6 ранга, - не менее 10 суток.
+Исключение: КМБ (5 суток).
+6.4 Национальная гвардия может принять сотрудника силовой структуры на КМБ для получения военного билета. КМБ проводится только по согласованию с куратором фракции или главным следящим за государственными фракциями.
+6.5 Запрещена продажа военных билетов под любым предлогом, независимо от существования любых биографий и РП ситуаций.
+
+Weazel News​
+
+7.1 Запрещено вмешиваться в РП-процесс государственных организаций.
+Исключение: Участие согласовано.
+7.2 Лидер может сменить статус фракции с государственной на коммерческую и обратно (для становления государственной структурой, нужно разрешение Губернатора).
+7.3 Редактирование объявлений должно происходить регулярно.
+Исключение: После проведения прямого эфира может соблюдаться «радиомолчание» до 3-х минут. При необходимости во время прямого эфира может быть введено радиомолчание, регулируемое законом о СМИ.
+7.4 Основные критерии и требования к редакции объявлений и подаче прямого эфира:
+Объявления и предложения в прямом эфире должны начинаться с заглавной буквы.
+Текст объявления и новостей в прямом эфире не должны содержать MG информации.
+Запрещается продажа, в том числе и завуалированная, нелегальных предметов (спасательные жилеты, порошки, водяные пистолеты и т.д).
+Запрещено использование нецензурных выражений, даже в завуалированном виде.
+Все названия автомобилей должны быть в английской (ENG) раскладке так, как названия указаны функционально.
+Запрещено упоминание и предложение принять участие в азартных играх.
+Цены в объявлениях должны быть указаны без сокращений, с расстановкой точек после трёх символов. Пример: 1.500.000$.
+Запрещено использование Caps’a в объявлениях и прямых эфирах. Исключение: Номера ТС
+Сотрудники Weazel News при отклонении подаваемого объявления должны использовать функциональную кнопку «Отклонить», а также указывать точную причину отказа.
+Соблюдение грамотной модерации, а именно: правил пунктуации и орфографии.
+7.5 Цена за символ в объявлениях устанавливается Лидером по согласованию с куратором и главным следящим за государственными фракциями.
+7.6 Запрещено использовать «Метки» для мероприятий не по назначению.
+7.7 Организация Weazel News обязана проводить различные мероприятия большого масштаба не реже, чем 1 раз в неделю.
+7.8 Организация Weazel News обязана проводить различные мероприятия малого масштаба не реже чем 1 раз в день.
+7.9 Запрещено вводить ограничения с целью запрета редакции рекламных объявлений от определённого игрока или группы игроков (ЧС редакции).
+Исключение: Одобрение куратора или главного следящего за государственными фракциями при наличии веской IC причины.
+7.10 Сотрудникам Weazel News запрещено участвовать в викторинах и занимать призовые места в интерактивах и мероприятиях, которые проводятся от фракции Weazel News. Пункт распространяется на всех персонажей, если хотя бы один состоит во фракции Weazel News.
+7.11 Запрещено проводить прямые эфиры, если между ними нет задержки в течение 20-ти минут.
+Исключение: Эфиры, которые согласно IC являются срочными для информирования и безопасности населения (об ограблении, террористическом акте, нападении на государственную структуру, ЧП или ВП в штате, необходимость эфира в ходе фракционного МП или ГМП, одобренного на форуме), одобрение куратора или главного следящего за государственными фракциями.
+7.12 Сотрудники Weazel News обязаны проводить эфиры не реже, чем 1 раз в 24 часа.
+7.13 Сотрудники Weazel News могут внедряться в государственную структуру с целью сбора материала для написания статьи и информирования граждан о коррупции, возможном блате или других нарушениях.
+Примечание: Требуется наличие одобрения главного следящего за государственными фракциями.
+
+San Andreas State Prison Authority​
+
+8.1 Лидер федеральной тюрьмы имеет право устанавливать внутренней регламент работы после утверждения у куратора фракции и в дальнейшем у Правительства.
+8.2 Сотрудники федеральной тюрьмы обязаны осуществлять надзор за преступниками, соблюдая регламент заключения под стражу.
+8.3 Сотрудники федеральной тюрьмы имеют право участвовать в специальных операциях и массовых патрулях.
+8.4 Сотрудники тюрьмы могут увеличивать и уменьшать срок ареста заключенных, руководствуясь внутренним регламентом.
+Примечание: Обязательно иметь видеодоказательства, по какой причине изменён срок ареста заключённых.
+Примечание: Администрация вправе запросить видеодоказательства изменения срока ареста заключённого.
+Примечание: Запрещено увеличивать сроки заключенным за счёт статей при аресте.
+8.5 Интервал между изменением срока одного заключённого составляет 30 минут.
+Примечание: Интервал повышения и понижения не зависят друг от друга.
+Исключение: Функциональный побег из федеральной тюрьмы.
+8.6 Каждая камера в следственном изоляторе и федеральной тюрьме имеет свой лимит заключённых в зависимости от количества коек в ней.
+8.6.1 Запрещено размещение заключённых в количестве, большем чем коек в этой камере.
+8.7 Запрещено без оснований выпускать заключённых | Деморган 60 минут + Warn.
+8.8 В случае, если происходит прокурорская проверка, игроки, которые в течение часа до прокурорской проверки подверглись физическому воздействию со стороны сотрудников федеральной тюрьмы, имеют право требовать прокурора провести их медицинское обследование с целью снятия побоев. При подтверждении наличия побоев, прокурор имеет право уменьшить оставшийся срок заключённого в пределах от 1 часа до 2х.
+Примечание: Необходимо предоставить видеодоказательства избиения со стороны сотрудника.
+8.9 Сотрудникам федеральной тюрьмы разрешено частично нарушать этический кодекс, общаться с заключёнными не в деловом формате, обращаться на "ты", материться, а также применять физическое воздействие по отношению к заключённым в случае непослушного поведения.
+Примечание: Подобные действия запрещены в случае, если вблизи присутствуют представители других государственных структур, иначе данные действия будут расцениваться, как nonRP поведение.
+
+Правила государственной волны и рации департамента​
+
+9.1 Интервал между государственными новостями должен быть минимум 10 минут (20 минут для одной фракции), следует заранее договариваться о временных промежутках в канал департамента (/d).
+Примечание: Очередь на подачу государственной новости необходимо занять в дискорд-канале.
+9.2 Во время каждой государственной новости нужно оповещать, что Вы заняли государственную волну в канале департамента (/d).
+9.3 Запрещена ООС информация в государственных новостях и канале департамента (/d) и любое NonRP | Мут от 40 минут / Warn.
+9.4 Запрещено использование нецензурной лексики и любые оскорбления в IC чатах: рация департамента, государственная волна, объявления и эфир Weazel News | Мут от 40 минут / Warn.
+
+Взаимодействие с рангами​
+
+10.1 Губернатору правительства, Вице-Губернатору, Председателю Верховного суда, Генеральному прокурору разрешается устанавливать любую должность игроку, состоящему во фракции GOV, в пределах одного министерства или коллегии.
+Примечание: Назначение происходит после прохождения системы повышения от должности Инструктор USSS, Старший Адвокат, Event-Менеджер, Старший Прокурор, Судебный секретарь, Лицензиар, в соответствии с министерствами.
+Примечание: Необходимо наличие письменного указа, приказа, постановления или прочего с IC причиной.
+10.2 Восстановление в любой государственной структуре происходит через руководящий состав фракций с условием -2 ранга.
+Примечание: Лидер не обязан восстанавливать игрока во фракцию. Восстановление возможно лишь по одобрению и согласию лидера или его заместителя.
+Примечание: Восстановление возможно на протяжении 30 суток с момента увольнения по соглашению двух сторон (при подачи рапорта на увольнение).
+Примечание: Восстановлении возможно при условии, что игрок проработал на занимаемой должности более 7 дней.
+Примечание: Запрещено восстановление без доказательств о занимаемом ранге или записей в логах фракции.
+Примечание: Ограничение в 30 суток не действует при условии, что увольнение, а также последующее восстановление происходило при одном лидере, а сам лидер в течение этого периода оставался неизменным.
+10.2.1 При использовании чёрного рынка для снятия судимостей после увольнения из государственной структуры восстановление доступно только на 1 ранг.
+
+10.3 Сотрудникам государственных структур разрешено принимать игроков только на 1 ранг.
+Примечание: Принятие не считается за повышение. При принятии человека и успешном прохождении (сдачи) им тестов или экзаменов сотрудник может быть повышен на один ранг (с 1 на 2).
+Исключение: При переводе или восстановлении во фракцию разрешается устанавливать сразу необходимый ранг.
+Исключение: Игрок с военным билетом может быть принят во фракцию National Guard сразу на 5 ранг на усмотрение лидера.
+10.4 Запрещено находиться во фракции LSSD, FIB на ранге выше 4-го без военного билета; LSPD - выше 6-го ранга, GOV - выше 8-го ранга (только для отдела USSS). Ответственность несёт игрок старшего состава, выдавший ранг сотруднику без билета.
+Примечание: Скриншот военного билета должен быть предоставлен в специальный дискорд-канал фракции. На скриншоте должен быть виден HUD, а также включено отображение никнеймов F10 - Настройки - Интерфейс - Отображать имя персонажа.
+10.5 Лидер силовой структуры может устанавливать дополнительные ограничения на повышение по срокам на свое усмотрение, но не снижать их.
+10.6 При изменении ранга сотрудника необходимо указать в причине ссылку на сообщение в Discord-канале с отчётностью о проделанной работе или ссылку на указ о назначении на должность.
+Примечание: Если в причине не была указана необходимая ссылка, либо были нарушены правила изменения рангов (например, повышение более чем на 2 ранга в день), администрация вправе восстановить последний корректный ранг сотрудника.
+10.6.1 При увольнении сотрудника необходимо указать причину: ссылку на сообщение с рапортом в Discord-канале (если увольнение происходит по собственному желанию) или соответствующую статью Трудового кодекса (в остальных случаях).
+Примечание: При увольнении игрока по пункту 7.2 Трудового кодекса нужно указывать подпункт. Пример: 7.2.5 Трудового кодекса.
+10.7 Запрещено повышать игрока более чем на 2 ранга в 24 часа.
+Исключение: При переводе или восстановлении во фракцию разрешается устанавливать сразу необходимый ранг.
+10.8 Количество старшего состава во фракции регулируется администрацией сервера в лице куратора фракции или главного следящего за государственными фракциями.
+Исключение: Во фракции Government Вице-Губернатор может быть только один.
+10.9 Переводы возможны исключительно между фракциями LSSD/LSPD/FIB/ARMY/SASPA/GOV (исключительно USSS) с одобрения лидеров или их заместителей в ЧП канале (🔄┃переводы) согласно таблице переводов (кликабельно).
+Примечание: Перевод между этими фракциями возможен только при условии нахождения сотрудника на текущем ранге не менее 7 суток.
+10.10 В случае многократного отказа в переводе сотрудник имеет право обратиться к правительству для вмешательства в процесс.
+Примечание: Губернатор, а также Глава Управления Труда может выдать прямое разрешение на перевод, которое является обязательным для исполнения.
+10.11 Во время "дня блата" можно проводить любые взаимодействия с рангом сотрудника, увольнять и принимать без IC и ООС причины.
+Примечание: День блата начинается при назначении на должность лидера, сроком не более 24 часа, а также на усмотрение главного следящего за государственными фракциями.
+Примечание: Каждый лидер имеет второй день блата на 15 день его лидерского срока (с 12:00 до 24:00).
+10.12 Запрещено производить какие-либо изменения рангов (повышения, понижения, назначения, переводы, восстановления и иные действия, связанные с рангами) за любые материальные или нематериальные блага. | Чёрный список государственных фракций / Чёрный список проекта.
+Примечание: К материальным и нематериальным благам относятся, но не ограничиваются: передача или перевод денежных средств, имущества, предметов, автомобилей, недвижимости, игровых ценностей, а также оказание платных услуг, передача информации либо иные действия, направленные на получение выгоды.
+
